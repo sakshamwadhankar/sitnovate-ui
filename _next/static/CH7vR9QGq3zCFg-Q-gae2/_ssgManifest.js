@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002Fcharacters","\u002Fcharacters\u002F[slug]","\u002Fclans","\u002Fclans\u002F[slug]","\u002Fepisodes","\u002Flegal\u002F[slug]","\u002Flineages","\u002Fmap","\u002Fparticles","\u002Fscroll-rig","\u002Fstory","\u002Fstyleguide"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
