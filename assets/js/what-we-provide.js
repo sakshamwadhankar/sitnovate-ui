@@ -51,7 +51,7 @@
 
                 <!-- Cards Grid -->
                 <div class="wwp-cards">
-                    <!-- FACILITIES Card -->
+                    <!-- ADVANCED FACILITIES Card -->
                     <div class="magic-card">
                         <div class="card-glow"></div>
                         <div class="card-body">
@@ -67,28 +67,36 @@
                                         <div class="icon-glow"></div>
                                         <div class="icon-box"><span class="icon-rotate">${ICONS.castle}</span></div>
                                     </div>
-                                    <h3 class="card-name">Facilities</h3>
+                                    <h3 class="card-name">Advanced Facilities</h3>
                                 </div>
 
                                 <ul class="feature-list">
                                     <li class="feature-item">
                                         <span class="feat-icon">${ICONS.wifi}</span>
-                                        <div><strong>High-Speed WiFi</strong><em>Enchanted connectivity throughout the castle</em></div>
-                                    </li>
-                                    <li class="feature-item">
-                                        <span class="feat-icon">${ICONS.utensils}</span>
-                                        <div><strong>24/7 Food</strong><em>Great Hall feasts available at all hours</em></div>
+                                        <div><strong>Air-conditioned high-density innovation zones</strong><em>for optimized cognitive performance.</em></div>
                                     </li>
                                     <li class="feature-item">
                                         <span class="feat-icon">${ICONS.zap}</span>
-                                        <div><strong>Charging Stations</strong><em>Replenish your magical devices</em></div>
+                                        <div><strong>Industrial-grade 24-hour power redundancy systems</strong><em>ensuring zero downtime.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.wifi}</span>
+                                        <div><strong>High-bandwidth fiber optic backbone</strong><em>with dedicated gigabit-tier connectivity.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.users}</span>
+                                        <div><strong>Access to specialized engineering and rapid prototyping laboratories.</strong></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.scroll}</span>
+                                        <div><strong>Ergonomic rest and recuperation facilities</strong><em>within the 75-acre campus.</em></div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TREASURES Card -->
+                    <!-- EXCLUSIVE TREASURES Card -->
                     <div class="magic-card">
                         <div class="card-glow"></div>
                         <div class="card-body">
@@ -104,25 +112,74 @@
                                         <div class="icon-glow"></div>
                                         <div class="icon-box"><span class="icon-rotate">${ICONS.gem}</span></div>
                                     </div>
-                                    <h3 class="card-name">Treasures</h3>
+                                    <h3 class="card-name">Exclusive Treasures</h3>
                                 </div>
 
                                 <ul class="feature-list">
                                     <li class="feature-item">
                                         <span class="feat-icon">${ICONS.coins}</span>
-                                        <div><strong>Cash Prizes</strong><em>Galleons for the most worthy champions</em></div>
+                                        <div><strong>Substantial national-level financial prize pool</strong><em>for top-tier technical solutions.</em></div>
                                     </li>
                                     <li class="feature-item">
                                         <span class="feat-icon">${ICONS.shirt}</span>
-                                        <div><strong>Cool Swag</strong><em>House robes and magical artifacts</em></div>
-                                    </li>
-                                    <li class="feature-item">
-                                        <span class="feat-icon">${ICONS.users}</span>
-                                        <div><strong>Mentorship</strong><em>Guidance from skilled Professors</em></div>
+                                        <div><strong>Specialized developer hardware kits</strong><em>and industry-grade peripheral swags.</em></div>
                                     </li>
                                     <li class="feature-item">
                                         <span class="feat-icon">${ICONS.scroll}</span>
-                                        <div><strong>Certificates</strong><em>Official Ministry decrees of completion</em></div>
+                                        <div><strong>Formal institutional certification</strong><em>from the SIT Nagpur Innovation Council.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.users}</span>
+                                        <div><strong>Opportunities for industry-partnered internships</strong><em>and collaborative projects.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.scroll}</span>
+                                        <div><strong>Exclusive access to advanced technical repositories</strong><em>and software licenses.</em></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LONGITUDINAL BENEFITS Card -->
+                    <div class="magic-card">
+                        <div class="card-glow"></div>
+                        <div class="card-body">
+                            <div class="gem-top"><div class="gem-diamond"><div class="gem-dot"></div></div></div>
+                            <div class="corner-bl"></div>
+                            <div class="corner-br"></div>
+                            
+                            <div class="card-inner">
+                                <div class="bg-watermark">${ICONS.users}</div>
+                                
+                                <div class="card-head">
+                                    <div class="icon-diamond">
+                                        <div class="icon-glow"></div>
+                                        <div class="icon-box"><span class="icon-rotate">${ICONS.users}</span></div>
+                                    </div>
+                                    <h3 class="card-name">Longitudinal Benefits</h3>
+                                </div>
+
+                                <ul class="feature-list">
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.users}</span>
+                                        <div><strong>Deep-tier networking opportunities</strong><em>with industry leaders and venture capitalists.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.scroll}</span>
+                                        <div><strong>Exposure to real-world heuristic problem-solving</strong><em>in high-stakes environments.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.gem}</span>
+                                        <div><strong>Strategic enhancement of professional credentials</strong><em>and academic portfolios.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.users}</span>
+                                        <div><strong>Collaborative peer-to-peer knowledge exchange</strong><em>within an elite student cohort.</em></div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <span class="feat-icon">${ICONS.zap}</span>
+                                        <div><strong>Accelerated career trajectory</strong><em>through exposure to the global technology sector.</em></div>
                                     </li>
                                 </ul>
                             </div>
@@ -206,10 +263,10 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 width: 100%;
-                max-width: 1000px;
+                max-width: 1400px;
             }
             @media(min-width: 768px) {
-                .wwp-cards { grid-template-columns: 1fr 1fr; gap: 3rem; }
+                .wwp-cards { grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
             }
 
             /* Single Card */
