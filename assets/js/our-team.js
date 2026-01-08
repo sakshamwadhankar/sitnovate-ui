@@ -4,40 +4,40 @@
  */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    function initTeam() {
-        // Find the 6th section wrapper
-        const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
-        const teamSection = sectionWrappers[5]; // 6th section (0-indexed)
+  function initTeam() {
+    // Find the 6th section wrapper
+    const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
+    const teamSection = sectionWrappers[5]; // 6th section (0-indexed)
 
-        if (!teamSection) {
-            setTimeout(initTeam, 100);
-            return;
-        }
+    if (!teamSection) {
+      setTimeout(initTeam, 100);
+      return;
+    }
 
-        // Check if already customized
-        if (teamSection.querySelector('.team-wrapper')) {
-            return;
-        }
+    // Check if already customized
+    if (teamSection.querySelector('.team-wrapper')) {
+      return;
+    }
 
-        // Find content container
-        const contentContainer = teamSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
-        if (!contentContainer) {
-            setTimeout(initTeam, 100);
-            return;
-        }
+    // Find content container
+    const contentContainer = teamSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
+    if (!contentContainer) {
+      setTimeout(initTeam, 100);
+      return;
+    }
 
-        // HIDE existing children
-        const existingChildren = contentContainer.children;
-        for (let i = 0; i < existingChildren.length; i++) {
-            existingChildren[i].style.display = 'none';
-        }
+    // HIDE existing children
+    const existingChildren = contentContainer.children;
+    for (let i = 0; i < existingChildren.length; i++) {
+      existingChildren[i].style.display = 'none';
+    }
 
-        // CREATE and APPEND custom content
-        const customWrapper = document.createElement('div');
-        customWrapper.className = 'team-wrapper';
-        customWrapper.innerHTML = `
+    // CREATE and APPEND custom content
+    const customWrapper = document.createElement('div');
+    customWrapper.className = 'team-wrapper';
+    customWrapper.innerHTML = `
       <h2 class="team-title">Our Team</h2>
       
       <div class="team-grid">
@@ -115,13 +115,13 @@
       </div>
     `;
 
-        contentContainer.appendChild(customWrapper);
+    contentContainer.appendChild(customWrapper);
 
-        // Add styles
-        if (!document.getElementById('team-styles')) {
-            const styles = document.createElement('style');
-            styles.id = 'team-styles';
-            styles.textContent = `
+    // Add styles
+    if (!document.getElementById('team-styles')) {
+      const styles = document.createElement('style');
+      styles.id = 'team-styles';
+      styles.textContent = `
         .team-wrapper {
           position: absolute;
           top: 0;
@@ -293,16 +293,16 @@
           }
         }
       `;
-            document.head.appendChild(styles);
-        }
-
-        console.log('Our Team section customized successfully!');
+      document.head.appendChild(styles);
     }
 
-    // Wait for DOM + React
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => setTimeout(initTeam, 1100));
-    } else {
-        setTimeout(initTeam, 1100);
-    }
+    console.log('Our Team section customized successfully!');
+  }
+
+  // Wait for DOM + React
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(initTeam, 1100));
+  } else {
+    setTimeout(initTeam, 1100);
+  }
 })();

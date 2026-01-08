@@ -4,40 +4,40 @@
  */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    function initSponsors() {
-        // Find the 5th section wrapper
-        const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
-        const sponsorSection = sectionWrappers[4]; // 5th section (0-indexed)
+  function initSponsors() {
+    // Find the 5th section wrapper
+    const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
+    const sponsorSection = sectionWrappers[4]; // 5th section (0-indexed)
 
-        if (!sponsorSection) {
-            setTimeout(initSponsors, 100);
-            return;
-        }
+    if (!sponsorSection) {
+      setTimeout(initSponsors, 100);
+      return;
+    }
 
-        // Check if already customized
-        if (sponsorSection.querySelector('.sponsors-wrapper')) {
-            return;
-        }
+    // Check if already customized
+    if (sponsorSection.querySelector('.sponsors-wrapper')) {
+      return;
+    }
 
-        // Find content container
-        const contentContainer = sponsorSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
-        if (!contentContainer) {
-            setTimeout(initSponsors, 100);
-            return;
-        }
+    // Find content container
+    const contentContainer = sponsorSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
+    if (!contentContainer) {
+      setTimeout(initSponsors, 100);
+      return;
+    }
 
-        // HIDE existing children
-        const existingChildren = contentContainer.children;
-        for (let i = 0; i < existingChildren.length; i++) {
-            existingChildren[i].style.display = 'none';
-        }
+    // HIDE existing children
+    const existingChildren = contentContainer.children;
+    for (let i = 0; i < existingChildren.length; i++) {
+      existingChildren[i].style.display = 'none';
+    }
 
-        // CREATE and APPEND custom content
-        const customWrapper = document.createElement('div');
-        customWrapper.className = 'sponsors-wrapper';
-        customWrapper.innerHTML = `
+    // CREATE and APPEND custom content
+    const customWrapper = document.createElement('div');
+    customWrapper.className = 'sponsors-wrapper';
+    customWrapper.innerHTML = `
       <h2 class="sponsors-title">Past Sponsors</h2>
       <p class="sponsors-subtitle">Thank you to our amazing sponsors who made SITNovate possible</p>
       
@@ -131,13 +131,13 @@
       </a>
     `;
 
-        contentContainer.appendChild(customWrapper);
+    contentContainer.appendChild(customWrapper);
 
-        // Add styles
-        if (!document.getElementById('sponsors-styles')) {
-            const styles = document.createElement('style');
-            styles.id = 'sponsors-styles';
-            styles.textContent = `
+    // Add styles
+    if (!document.getElementById('sponsors-styles')) {
+      const styles = document.createElement('style');
+      styles.id = 'sponsors-styles';
+      styles.textContent = `
         .sponsors-wrapper {
           position: absolute;
           top: 0;
@@ -287,16 +287,16 @@
           }
         }
       `;
-            document.head.appendChild(styles);
-        }
-
-        console.log('Past Sponsors section customized successfully!');
+      document.head.appendChild(styles);
     }
 
-    // Wait for DOM + React
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => setTimeout(initSponsors, 1000));
-    } else {
-        setTimeout(initSponsors, 1000);
-    }
+    console.log('Past Sponsors section customized successfully!');
+  }
+
+  // Wait for DOM + React
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(initSponsors, 1000));
+  } else {
+    setTimeout(initSponsors, 1000);
+  }
 })();

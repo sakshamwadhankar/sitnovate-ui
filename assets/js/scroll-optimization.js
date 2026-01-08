@@ -21,7 +21,7 @@
 
         isScrolling = true;
         currentSection = index;
-        
+
         sections[index].scrollIntoView({
             behavior: smooth ? 'smooth' : 'auto',
             block: 'start'
@@ -75,7 +75,7 @@
             sections.forEach((section, index) => {
                 const rect = section.getBoundingClientRect();
                 const distance = Math.abs(rect.top);
-                
+
                 if (rect.top <= window.innerHeight / 3 && distance < minDistance) {
                     minDistance = distance;
                     foundIndex = index;
@@ -128,8 +128,8 @@
             const images = section.querySelectorAll('img');
             images.forEach(img => {
                 // Only fix images that should be visible
-                if (!img.closest('.hp-card') && 
-                    !img.closest('.team-avatar') && 
+                if (!img.closest('.hp-card') &&
+                    !img.closest('.team-avatar') &&
                     !img.closest('.social-link') &&
                     !img.hasAttribute('data-hidden')) {
                     img.style.opacity = '1';
@@ -162,7 +162,7 @@
     function init() {
         // Add smooth scroll behavior
         document.documentElement.style.scrollBehavior = 'smooth';
-        
+
         // Add CSS for scroll snap and performance
         const style = document.createElement('style');
         style.id = 'scroll-optimization-css';
@@ -208,7 +208,7 @@
                 transform: translateZ(0);
             }
         `;
-        
+
         if (!document.getElementById('scroll-optimization-css')) {
             document.head.appendChild(style);
         }
@@ -216,7 +216,7 @@
         // Add wheel event listener for better scroll control (use capture phase)
         window.addEventListener('wheel', handleWheel, { passive: false, capture: true });
         window.addEventListener('scroll', handleScroll, { passive: true });
-        
+
         // Also handle touchpad scroll for better detection
         let touchpadTimeout;
         window.addEventListener('wheel', (e) => {

@@ -4,40 +4,40 @@
  */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    function initContact() {
-        // Find the 7th section wrapper
-        const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
-        const contactSection = sectionWrappers[6]; // 7th section (0-indexed)
+  function initContact() {
+    // Find the 7th section wrapper
+    const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
+    const contactSection = sectionWrappers[6]; // 7th section (0-indexed)
 
-        if (!contactSection) {
-            setTimeout(initContact, 100);
-            return;
-        }
+    if (!contactSection) {
+      setTimeout(initContact, 100);
+      return;
+    }
 
-        // Check if already customized
-        if (contactSection.querySelector('.contact-wrapper')) {
-            return;
-        }
+    // Check if already customized
+    if (contactSection.querySelector('.contact-wrapper')) {
+      return;
+    }
 
-        // Find content container
-        const contentContainer = contactSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
-        if (!contentContainer) {
-            setTimeout(initContact, 100);
-            return;
-        }
+    // Find content container
+    const contentContainer = contactSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
+    if (!contentContainer) {
+      setTimeout(initContact, 100);
+      return;
+    }
 
-        // HIDE existing children
-        const existingChildren = contentContainer.children;
-        for (let i = 0; i < existingChildren.length; i++) {
-            existingChildren[i].style.display = 'none';
-        }
+    // HIDE existing children
+    const existingChildren = contentContainer.children;
+    for (let i = 0; i < existingChildren.length; i++) {
+      existingChildren[i].style.display = 'none';
+    }
 
-        // CREATE and APPEND custom content
-        const customWrapper = document.createElement('div');
-        customWrapper.className = 'contact-wrapper';
-        customWrapper.innerHTML = `
+    // CREATE and APPEND custom content
+    const customWrapper = document.createElement('div');
+    customWrapper.className = 'contact-wrapper';
+    customWrapper.innerHTML = `
       <div class="contact-magical-border"></div>
       
       <h2 class="contact-title">
@@ -133,13 +133,13 @@
       </div>
     `;
 
-        contentContainer.appendChild(customWrapper);
+    contentContainer.appendChild(customWrapper);
 
-        // Add styles
-        if (!document.getElementById('contact-styles')) {
-            const styles = document.createElement('style');
-            styles.id = 'contact-styles';
-            styles.textContent = `
+    // Add styles
+    if (!document.getElementById('contact-styles')) {
+      const styles = document.createElement('style');
+      styles.id = 'contact-styles';
+      styles.textContent = `
         .contact-wrapper {
           position: absolute;
           top: 0;
@@ -386,16 +386,16 @@
           }
         }
       `;
-            document.head.appendChild(styles);
-        }
-
-        console.log('Get in Touch section customized successfully!');
+      document.head.appendChild(styles);
     }
 
-    // Wait for DOM + React
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => setTimeout(initContact, 1200));
-    } else {
-        setTimeout(initContact, 1200);
-    }
+    console.log('Get in Touch section customized successfully!');
+  }
+
+  // Wait for DOM + React
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(initContact, 1200));
+  } else {
+    setTimeout(initContact, 1200);
+  }
 })();

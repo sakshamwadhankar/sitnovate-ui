@@ -4,40 +4,40 @@
  */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    function initEventHighlights() {
-        // Find the 4th section wrapper (Event Highlights)
-        const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
-        const eventSection = sectionWrappers[3]; // 4th section (0-indexed)
+  function initEventHighlights() {
+    // Find the 4th section wrapper (Event Highlights)
+    const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
+    const eventSection = sectionWrappers[3]; // 4th section (0-indexed)
 
-        if (!eventSection) {
-            setTimeout(initEventHighlights, 100);
-            return;
-        }
+    if (!eventSection) {
+      setTimeout(initEventHighlights, 100);
+      return;
+    }
 
-        // Check if already customized
-        if (eventSection.querySelector('.event-highlights-wrapper')) {
-            return;
-        }
+    // Check if already customized
+    if (eventSection.querySelector('.event-highlights-wrapper')) {
+      return;
+    }
 
-        // Find content container
-        const contentContainer = eventSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
-        if (!contentContainer) {
-            setTimeout(initEventHighlights, 100);
-            return;
-        }
+    // Find content container
+    const contentContainer = eventSection.querySelector('.StorySectionWrapper_ContentContainer__HvMko');
+    if (!contentContainer) {
+      setTimeout(initEventHighlights, 100);
+      return;
+    }
 
-        // HIDE existing children (don't remove)
-        const existingChildren = contentContainer.children;
-        for (let i = 0; i < existingChildren.length; i++) {
-            existingChildren[i].style.display = 'none';
-        }
+    // HIDE existing children (don't remove)
+    const existingChildren = contentContainer.children;
+    for (let i = 0; i < existingChildren.length; i++) {
+      existingChildren[i].style.display = 'none';
+    }
 
-        // CREATE and APPEND custom content
-        const customWrapper = document.createElement('div');
-        customWrapper.className = 'event-highlights-wrapper';
-        customWrapper.innerHTML = `
+    // CREATE and APPEND custom content
+    const customWrapper = document.createElement('div');
+    customWrapper.className = 'event-highlights-wrapper';
+    customWrapper.innerHTML = `
       <h2 class="event-highlights-title">Event Highlights</h2>
       
       <div class="event-grid">
@@ -85,13 +85,13 @@
       </div>
     `;
 
-        contentContainer.appendChild(customWrapper);
+    contentContainer.appendChild(customWrapper);
 
-        // Add styles
-        if (!document.getElementById('event-highlights-styles')) {
-            const styles = document.createElement('style');
-            styles.id = 'event-highlights-styles';
-            styles.textContent = `
+    // Add styles
+    if (!document.getElementById('event-highlights-styles')) {
+      const styles = document.createElement('style');
+      styles.id = 'event-highlights-styles';
+      styles.textContent = `
         .event-highlights-wrapper {
           position: absolute;
           top: 0;
@@ -203,16 +203,16 @@
           }
         }
       `;
-            document.head.appendChild(styles);
-        }
-
-        console.log('Event Highlights section customized successfully!');
+      document.head.appendChild(styles);
     }
 
-    // Wait for DOM + React
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => setTimeout(initEventHighlights, 900));
-    } else {
-        setTimeout(initEventHighlights, 900);
-    }
+    console.log('Event Highlights section customized successfully!');
+  }
+
+  // Wait for DOM + React
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(initEventHighlights, 900));
+  } else {
+    setTimeout(initEventHighlights, 900);
+  }
 })();
