@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" data-next-head="" />
+  <meta name="viewport" content="width=device-width" data-next-head="" />
+  <script async="" src="assets/js/plausible.js"></script>
+  <title data-next-head="">The Boy Who Lived | Harry Potter</title>
+  <meta name="title" content="The Boy Who Lived | Harry Potter" data-next-head="" />
+  <meta name="description" content="Explore the magic of the Wizarding World | Exclusively on Hogwarts+"
+    data-next-head="" />
+  <meta property="og:type" content="website" data-next-head="" />
+  <meta property="og:url" content="#" data-next-head="" />
+  <meta property="og:title" content="The Boy Who Lived | Harry Potter" data-next-head="" />
+  <meta property="og:description" content="Explore the magic of the Wizarding World | Exclusively on Hogwarts+"
+    data-next-head="" />
+  <meta property="og:image" content="/images/1.jpg" data-next-head="" />
+  <meta property="twitter:card" content="summary_large_image" data-next-head="" />
+  <meta property="twitter:url" content="#" data-next-head="" />
+  <meta property="twitter:title" content="The Boy Who Lived | Harry Potter" data-next-head="" />
+  <meta property="twitter:description" content="Explore the magic of the Wizarding World | Exclusively on Hogwarts+"
+    data-next-head="" />
+  <meta property="twitter:image" content="/images/2.jpg" data-next-head="" />
+  <link rel="canonical" href="#" data-next-head="" />
+  <link rel="preload" href="/images/logo/brand-mark.png" as="image" data-next-head="" />
+  <link rel="preload" href="/images/logo/logo-gold.png" as="image" data-next-head="" />
+  <link rel="preload" href="assets/css/fonts.css" as="style" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.datocms-assets.com" />
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon/favicon-48x48.png" />
+  <link rel="manifest" href="/favicon/manifest.webmanifest" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#fff" />
+  <meta name="application-name" />
+  <link rel="preload" href="/_next/static/css/136a87ff5e5bb4f7.css" as="style" />
+  <link rel="preload" href="/_next/static/css/4b8f021146e1c249.css" as="style" />
+  <link rel="preload" href="/_next/static/css/e74fce03d6e2d3d5.css" as="style" />
+  <script>
+    window.plausible = window.plausible || function () { (plausible.q = plausible.q || []).push(arguments) }, plausible.init = plausible.init || function (i) { plausible.o = i || {} };
+    plausible.init()
+  </script>
+  <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.defer = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-W866FNSQ');</script>
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="/_next/static/css/136a87ff5e5bb4f7.css" data-n-g="" />
+  <link rel="stylesheet" href="/_next/static/css/4b8f021146e1c249.css" data-n-p="" />
+  <link rel="stylesheet" href="/_next/static/css/e74fce03d6e2d3d5.css" data-n-p="" /><noscript data-n-css=""></noscript>
+  <script defer="" noModule="" src="/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
+  <script src="/_next/static/chunks/webpack-f22d6a2276e91207.js" defer=""></script>
+  <script src="/_next/static/chunks/framework-03fba9007f73ed40.js" defer=""></script>
+  <script src="/_next/static/chunks/main-c3f9032cf45b9dc9.js" defer=""></script>
+  <script src="/_next/static/chunks/pages/_app-accb019de61efc01.js" defer=""></script>
+  <script src="/_next/static/chunks/ee9ce975-eeb962b3087f03e1.js" defer=""></script>
+  <script src="/_next/static/chunks/4d99978a-fb835d0a24366ab6.js" defer=""></script>
+  <script src="/_next/static/chunks/52-796acc14f81c7e09.js" defer=""></script>
+  <script src="/_next/static/chunks/110-d82c9e1219d89c71.js" defer=""></script>
+  <script src="/_next/static/chunks/951-c31ddfd053809004.js" defer=""></script>
+  <script src="/_next/static/chunks/153-12f1039551e1e429.js" defer=""></script>
+  <script src="/_next/static/chunks/207-e305b37b4649ef8c.js" defer=""></script>
+  <script src="/_next/static/chunks/pages/story-ad03a40ab6b70e27.js" defer=""></script>
+  <script src="/_next/static/CH7vR9QGq3zCFg-Q-gae2/_buildManifest.js" defer=""></script>
+  <script src="/_next/static/CH7vR9QGq3zCFg-Q-gae2/_ssgManifest.js" defer=""></script>
+</head>
+
+<body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W866FNSQ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <link rel="preload" as="image" href="/images/logo/brand-mark.png" />
+  <link rel="preload" as="image" href="/images/logo/logo-gold.png" />
+  <div id="__next">
+    <main class="BaseLayout_main__AZAQI">
+      <div class="StoryCanvas_StoryCanvas__RSZXL background-dark">
+        <div style="position:relative;width:100%;height:100%;overflow:hidden;pointer-events:auto">
+          <div style="width:100%;height:100%"><canvas style="display:block"></canvas></div>
+        </div>
+      </div>
+      <div class="StoryOverlayCanvas_StoryOverlayCanvas__EUgXC">
+        <div style="position:relative;width:100%;height:100%;overflow:hidden;pointer-events:auto">
+          <div style="width:100%;height:100%"><canvas style="display:block"></canvas></div>
+        </div>
+      </div>
+      <article class="PageFrameLayout_PageFrameLayout__XeVPk grid PageFrameLayout_spacing__h5bWL">
+        <div class="PageFrameLayout_vertical-rule__FNOxz PageFrameLayout_vertical-rule-left__IR2nN" style="opacity:0">
+        </div>
+        <div class="PageFrameLayout_vertical-rule__FNOxz PageFrameLayout_vertical-rule-right__LRL2A" style="opacity:0">
+        </div>
+        <header class="PageFrameLayout_header__kPFXh col-2 PageFrameLayout_spacing__h5bWL" style="opacity:0"><button
+            class="button PageFrameLayout_menu-button__AKY5d">Menu</button>
+          <div class="PageFrameLayout_horizontal-rule__ju8is"></div><a class="PageFrameLayout_logo__Lnk9n" href="#"><img
+              alt="The Pendragon Cycle - Rise of the Merlin brand mark" width="48" height="52" decoding="async"
+              data-nimg="1" style="color:transparent" src="/images/logo/brand-mark.png" /><span
+              class="visually-hidden">Navigate to the homepage</span></a>
+          <div class="PageFrameLayout_horizontal-rule__ju8is"></div>
+          <div class="PageFrameLayout_right-button-wrapper__Gdrf2"><button aria-pressed="false"
+              class="AudioToggle_AudioToggle__yHuAj PageFrameLayout_audio-toggle__ZtobC"><span
+                class="AudioToggle_SoundContainer__RHwwt"><span></span><span></span><span></span><span></span><span></span></span><span
+                class="visually-hidden">Mute</span></button></div>
+        </header>
+        <nav class="PageFrameLayout_navigation__5pvL7 col-2 subgrid" style="opacity:0; pointer-events:none;"></nav>
+      </article>
+      <div data-focus-guard="true" tabindex="-1"
+        style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"></div>
+      <div data-focus-lock-disabled="disabled">
+        <nav class="Header_fullscreenMenu__3FBD0 background-dark"
+          style="opacity:0;visibility:hidden;transform:translateX(-100%)"><button class="Header_closeButton__zcq7C"
+            style="opacity:0;transform:translateY(40px)"><svg fill="none" viewBox="0 0 44 44">
+              <rect width="34" height="34" x="5" y="5" stroke="currentColor" rx="17"></rect>
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
+                d="m27.5 16.5-11 11m0-11 11 11"></path>
+            </svg><span class="visually-hidden">Close</span></button>
+          <menu class="Header_menuContent__wgIDe">
+
+            <li style="opacity:0;transform:translateY(40px)"><a target="_blank" class="ff-link-28"
+                href="#">Subscribe</a></li>
+          </menu>
+          <footer class="Header_footer__LcF9B">
+            <div class="Header_mediaContainer__89I98">
+              <div style="opacity:0"></div>
+              <div style="opacity:0"></div>
+              <div style="opacity:0"></div>
+              <div style="opacity:0"></div>
+              <div style="opacity:0"></div>
+              <div style="opacity:0"></div>
+              <div style="opacity:0"></div>
+            </div>
+            <div class="Header_innerFooter__LYIpI"><a target="_blank" class="ff-link-16" href="#">Terms of
+                Use</a><span>&amp;</span><a target="_blank" class="ff-link-16" href="#">Privacy Policy</a></div>
+          </footer>
+        </nav>
+      </div>
+      <div data-focus-guard="true" tabindex="-1"
+        style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"></div>
+      <article class="StickyScrollContainer_StickyScrollContainer__YqUg7">
+        <div class="StorySectionWrapper_wrapper__o7CDl">
+          <div class="StorySectionWrapper_content-wrapper__pmLR0 grid" style="opacity:0;pointer-events:none">
+            <div class="StorySectionWrapper_content__maPBT StorySectionWrapper_mobile-rows__9MZk2 grid">
+              <div class="StorySectionWrapper_ContentContainer__HvMko grid">
+                <div class="StoryFold_middle-section__nscMD"
+                  style="opacity:0;filter:blur(4px);transform:translateY(10px) scale(0.8)"><img
+                    alt="The Pendragon Cycle Logo" width="1032" height="224" decoding="async" data-nimg="1"
+                    style="color:transparent" src="/images/logo/logo-gold.png" />
+                  <div class="StoryFold_arrow-section__IRZla"
+                    style="opacity:0;filter:blur(4px);transform:translateY(20px)">
+                    <div class="StoryFold_motion-arrow__I0ka4" style="transform:translateY(-10px) rotate(-90deg)"><svg
+                        width="42" height="10" viewBox="0 0 42 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5H41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path
+                          d="M5.77297 1.28769C6.06586 0.994796 6.06586 0.519922 5.77297 0.227029C5.48008 -0.0658642 5.0052 -0.0658642 4.71231 0.227029L5.77297 1.28769ZM1.53033 5.53033L5.77297 1.28769L4.71231 0.227029L0.46967 4.46967L1.53033 5.53033Z"
+                          fill="currentColor"></path>
+                        <g name="top-fins">
+                          <path
+                            d="M22.773 1.30136C23.0659 1.00847 23.0659 0.533594 22.773 0.240701C22.4801 -0.0521924 22.0052 -0.0521924 21.7123 0.240701L22.773 1.30136ZM18.5303 5.544L22.773 1.30136L21.7123 0.240701L17.4697 4.48334L18.5303 5.544Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M29.773 1.30136C30.0659 1.00847 30.0659 0.533594 29.773 0.240701C29.4801 -0.0521924 29.0052 -0.0521924 28.7123 0.240701L29.773 1.30136ZM25.5303 5.544L29.773 1.30136L28.7123 0.240701L24.4697 4.48334L25.5303 5.544Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M36.773 1.30136C37.0659 1.00847 37.0659 0.533594 36.773 0.240701C36.4801 -0.0521924 36.0052 -0.0521924 35.7123 0.240701L36.773 1.30136ZM32.5303 5.544L36.773 1.30136L35.7123 0.240701L31.4697 4.48334L32.5303 5.544Z"
+                            fill="currentColor"></path>
+                        </g>
+                        <path
+                          d="M5.77297 8.71231C6.06586 9.0052 6.06586 9.48008 5.77297 9.77297C5.48008 10.0659 5.0052 10.0659 4.71231 9.77297L5.77297 8.71231ZM1.53033 4.46967L5.77297 8.71231L4.71231 9.77297L0.46967 5.53033L1.53033 4.46967Z"
+                          fill="currentColor"></path>
+                        <g name="bottom-fins">
+                          <path
+                            d="M22.773 8.68497C23.0659 8.97786 23.0659 9.45273 22.773 9.74563C22.4801 10.0385 22.0052 10.0385 21.7123 9.74563L22.773 8.68497ZM18.5303 4.44233L22.773 8.68497L21.7123 9.74563L17.4697 5.50299L18.5303 4.44233Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M29.773 8.68497C30.0659 8.97786 30.0659 9.45273 29.773 9.74563C29.4801 10.0385 29.0052 10.0385 28.7123 9.74563L29.773 8.68497ZM25.5303 4.44233L29.773 8.68497L28.7123 9.74563L24.4697 5.50299L25.5303 4.44233Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M36.773 8.68497C37.0659 8.97786 37.0659 9.45273 36.773 9.74563C36.4801 10.0385 36.0052 10.0385 35.7123 9.74563L36.773 8.68497ZM32.5303 4.44233L36.773 8.68497L35.7123 9.74563L31.4697 5.50299L32.5303 4.44233Z"
+                            fill="currentColor"></path>
+                        </g>
+                      </svg></div><span class="ff-link-24">Scroll for More</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="StorySectionWrapper_wrapper__o7CDl">
+          <div class="StorySectionWrapper_content-wrapper__pmLR0 grid" style="opacity:0;pointer-events:none">
+            <div class="StorySectionWrapper_content__maPBT grid">
+              <div class="StorySectionWrapper_ContentContainer__HvMko grid">
+                <article class="StoryIntro_StoryIntro__Nb95A">
+                  <div>
+                    <div class="MarkdownTitle_title__Nhh3W StoryIntro_title__Mg1xi"
+                      style="opacity:0;filter:blur(4px);transform:translateY(10px) scale(0.8)">
+                      <h1><i>This is the story of the Boy Who Lived.</i></h1>
+                    </div>
+                    <p data-stagger="0.1" class="StoryIntro_text__dApqr"
+                      style="opacity:0;filter:blur(4px);transform:translateY(10px) scale(0.8)">But there’s more to
+                      Harry than his scar. To understand him, you have to understand the magic.
+                      The Wizarding World. And you have to understand Dumbledore.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="StorySectionWrapper_wrapper__o7CDl">
+          <div class="StorySectionWrapper_content-wrapper__pmLR0 grid" style="opacity:0;pointer-events:none">
+            <div class="StorySectionWrapper_content__maPBT grid">
+              <!-- Custom Styles for What We Provide Section -->
+              <style>
+                .hackathon-container {
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  z-index: 10;
+                  color: #fff;
+                  font-family: 'Cinzel', serif;
+                  /* Assuming Cinzel or similar is used */
+                }
+
+                /* Hide the restored image specifically */
+                .StorySplitContentOverlappingTitle_left-section__YaLm0 img {
+                  display: none !important;
+                }
+
+                .StorySplitContentOverlappingTitle_left-section__YaLm0 {
+                  display: none !important;
+                }
+
+                .hackathon-title {
+                  font-size: 3rem;
+                  margin-bottom: 2rem;
+                  text-align: center;
+                  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                  border-bottom: 3px solid #f59e0b;
+                  /* Gold underline */
+                  padding-bottom: 0.5rem;
+                }
+
+                .hackathon-grid {
+                  display: flex;
+                  flex-direction: column;
+                  /* Stack cards vertically */
+                  gap: 2rem;
+                  width: 90%;
+                  max-width: 800px;
+                  /* Limit width for better centered look */
+                }
+
+                @keyframes fadeInUp {
+                  from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                  }
+
+                  to {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
+                .hackathon-card {
+                  border-radius: 20px;
+                  padding: 2rem;
+                  backdrop-filter: blur(10px);
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                  display: flex;
+                  flex-direction: column;
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                  animation: fadeInUp 0.8s ease-out forwards;
+                  opacity: 0;
+                }
+
+                .hackathon-card:nth-child(1) {
+                  animation-delay: 0.2s;
+                }
+
+                .hackathon-card:nth-child(2) {
+                  animation-delay: 0.4s;
+                }
+
+                .hackathon-card:hover {
+                  transform: translateY(-5px);
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                }
+
+                /* Facilities Card */
+                .card-facilities {
+                  background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(23, 42, 69, 0.6));
+                  box-shadow: 0 0 20px rgba(64, 123, 255, 0.2);
+                  border-color: rgba(64, 123, 255, 0.3);
+                }
+
+                /* Treasures Card */
+                .card-treasures {
+                  background: linear-gradient(135deg, rgba(40, 20, 10, 0.8), rgba(60, 30, 15, 0.6));
+                  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+                  border-color: rgba(245, 158, 11, 0.3);
+                }
+
+                .card-header {
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 1.5rem;
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                  padding-bottom: 1rem;
+                }
+
+                .card-icon-lg {
+                  font-size: 2rem;
+                  margin-right: 1rem;
+                }
+
+                .card-title {
+                  font-size: 1.8rem;
+                  font-weight: bold;
+                }
+
+                .card-facilities .card-title {
+                  color: #e2e8f0;
+                }
+
+                .card-treasures .card-title {
+                  color: #fce7b0;
+                }
+
+                .items-grid {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 1rem;
+                }
+
+                .item-badge {
+                  display: flex;
+                  align-items: center;
+                  padding: 0.8rem;
+                  border-radius: 12px;
+                  font-family: sans-serif;
+                  /* Cleaner font for items */
+                  font-size: 0.9rem;
+                  font-weight: 500;
+                  transition: background 0.2s;
+                }
+
+                /* Facility Items */
+                .card-facilities .item-badge {
+                  background: rgba(30, 58, 138, 0.4);
+                  border: 1px solid rgba(59, 130, 246, 0.2);
+                  color: #bfdbfe;
+                }
+
+                .card-facilities .item-badge:hover {
+                  background: rgba(30, 58, 138, 0.6);
+                }
+
+                /* Treasure Items */
+                .card-treasures .item-badge {
+                  background: rgba(120, 53, 15, 0.4);
+                  border: 1px solid rgba(245, 158, 11, 0.2);
+                  color: #fde68a;
+                }
+
+                .card-treasures .item-badge:hover {
+                  background: rgba(120, 53, 15, 0.6);
+                }
+
+                .item-icon {
+                  margin-right: 0.8rem;
+                  font-size: 1.2rem;
+                }
+
+                @media (max-width: 768px) {
+                  .hackathon-grid {
+                    grid-template-columns: 1fr;
+                  }
+                }
+              </style>
+
+              <div class="StorySectionWrapper_ContentContainer__HvMko grid hackathon-container" style="display: flex;">
+                <h2 class="hackathon-title">What We Provide</h2>
+
+                <div class="hackathon-grid">
+                  <!-- Facilities Card -->
+                  <div class="hackathon-card card-facilities">
+                    <div class="card-header">
+                      <span class="card-icon-lg">🔷</span>
+                      <span class="card-title">Facilities</span>
+                    </div>
+                    <div class="items-grid">
+                      <div class="item-badge">
+                        <span class="item-icon">📡</span> High-Speed WiFi
+                      </div>
+                      <div class="item-badge">
+                        <span class="item-icon">⚡</span> Charging Stations
+                      </div>
+                      <div class="item-badge">
+                        <span class="item-icon">🍔</span> 24/7 Food
+                      </div>
+                      <div class="item-badge">
+                        <span class="item-icon">🛋️</span> Rest Zones
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Treasures Card -->
+                  <div class="hackathon-card card-treasures">
+                    <div class="card-header">
+                      <span class="card-icon-lg">⭐</span>
+                      <span class="card-title">Treasures</span>
+                    </div>
+                    <div class="items-grid">
+                      <div class="item-badge">
+                        <span class="item-icon">💰</span> Cash Prizes
+                      </div>
+                      <div class="item-badge">
+                        <span class="item-icon">🟢</span> Mentorship
+                      </div>
+                      <div class="item-badge">
+                        <span class="item-icon">🎁</span> Cool Swag
+                      </div>
+                      <div class="item-badge">
+                        <span class="item-icon">📜</span> Certificates
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="StorySectionWrapper_wrapper__o7CDl">
+          <div class="StorySectionWrapper_content-wrapper__pmLR0 grid" style="opacity:0;pointer-events:none">
+            <div class="StorySectionWrapper_content__maPBT grid">
+              <div class="StorySectionWrapper_ContentContainer__HvMko grid">
+                <!-- Event Highlights Section Custom Styles -->
+                <style>
+                  .highlights-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    color: #fff;
+                    font-family: 'Cinzel', serif;
+                    padding: 2rem 0;
+                  }
+
+                  .highlights-title {
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                    border-bottom: 3px solid #f59e0b;
+                    padding-bottom: 0.5rem;
+                    opacity: 0;
+                    animation: fadeInUp 0.8s ease-out forwards;
+                  }
+
+                  .events-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    width: 90%;
+                    max-width: 1200px;
+                  }
+
+                  .event-card {
+                    position: relative;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    aspect-ratio: 16/9;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    opacity: 0;
+                    animation: fadeInUp 0.8s ease-out forwards;
+                    cursor: pointer;
+                  }
+
+                  .event-card:nth-child(1) {
+                    animation-delay: 0.1s;
+                  }
+
+                  .event-card:nth-child(2) {
+                    animation-delay: 0.2s;
+                  }
+
+                  .event-card:nth-child(3) {
+                    animation-delay: 0.3s;
+                  }
+
+                  .event-card:nth-child(4) {
+                    animation-delay: 0.4s;
+                  }
+
+                  .event-card:nth-child(5) {
+                    animation-delay: 0.5s;
+                  }
+
+                  .event-card:nth-child(6) {
+                    animation-delay: 0.6s;
+                  }
+
+                  .event-card:hover {
+                    transform: scale(1.03);
+                    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.2);
+                    border-color: rgba(245, 158, 11, 0.4);
+                  }
+
+                  .event-card img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                  }
+
+                  .event-card:hover img {
+                    transform: scale(1.1);
+                  }
+
+                  .card-overlay {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 15px;
+                    background: rgba(0, 0, 0, 0.7);
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    backdrop-filter: blur(4px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                  }
+
+                  .card-label {
+                    color: #60a5fa;
+                    /* Light blue accent */
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    letter-spacing: 0.5px;
+                  }
+
+                  @media (max-width: 1024px) {
+                    .events-grid {
+                      grid-template-columns: repeat(2, 1fr);
+                    }
+                  }
+
+                  @media (max-width: 640px) {
+                    .events-grid {
+                      grid-template-columns: 1fr;
+                    }
+
+                    .highlights-title {
+                      font-size: 2rem;
+                    }
+                  }
+                </style>
+
+                <div class="highlights-container">
+                  <h2 class="highlights-title">Event Highlights</h2>
+                  <div class="events-grid">
+                    <!-- Card 1 -->
+                    <div class="event-card">
+                      <img src="/images/sitnovate/1.JPG" alt="Opening Ceremony" loading="lazy" />
+                      <div class="card-overlay"><span class="card-label">Opening Ceremony</span></div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="event-card">
+                      <img src="/images/sitnovate/2.JPG" alt="Team Formation" loading="lazy" />
+                      <div class="card-overlay"><span class="card-label">Team Formation</span></div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="event-card">
+                      <img src="/images/sitnovate/3.jpg" alt="Coding Marathon" loading="lazy" />
+                      <div class="card-overlay"><span class="card-label">Coding Marathon</span></div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="event-card">
+                      <img src="/images/sitnovate/4.jpg" alt="Mentorship Sessions" loading="lazy" />
+                      <div class="card-overlay"><span class="card-label">Mentorship Sessions</span></div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="event-card">
+                      <img src="/images/sitnovate/5.png" alt="Final Presentations" loading="lazy" />
+                      <div class="card-overlay"><span class="card-label">Final Presentations</span></div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="event-card">
+                      <img src="/images/sitnovate/6.png" alt="Award Ceremony" loading="lazy" />
+                      <div class="card-overlay"><span class="card-label">Award Ceremony</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="StorySectionWrapper_wrapper__o7CDl">
+          <div class="StorySectionWrapper_content-wrapper__pmLR0 grid" style="opacity:0;pointer-events:none">
+            <div class="StorySectionWrapper_content__maPBT grid">
+              <div class="StorySectionWrapper_ContentContainer__HvMko grid">
+                <div class="StorySplitContentImageAndText_left-section__1lpjA"
+                  style="opacity:0;filter:blur(4px);transform:translateY(20px)"><img alt="" loading="lazy" width="1108"
+                    height="1108" decoding="async" data-nimg="1" style="color:transparent" src="/images/5.jpg" /></div>
+                <div class="MarkdownTitle_title__Nhh3W StorySplitContentImageAndText_title__wCr82"
+                  style="opacity:0;filter:blur(4px);transform:translateY(10px) scale(0.8)">
+                  <h1>Before the Sorting Hat, a prophecy is birthed in lightning, scars, and love.</h1>
+                </div>
+                <p class="ff-p-16 StorySplitContentImageAndText_text__6nFPv"
+                  style="opacity:0;filter:blur(4px);transform:translateY(10px) scale(0.8)">In a world divided by light
+                  and dark, a boy's rising legend entwines with the fate of a dark lord. From the shadows of prophecy
+                  and loss, one will emerge, a wizard, a hero, called to shape a future not yet born, and to awaken
+                  the hope of a magical world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="StorySectionWrapper_wrapper__o7CDl">
+          <div class="StorySectionWrapper_content-wrapper__pmLR0 grid" style="opacity:0;pointer-events:none">
+            <div class="StorySectionWrapper_content__maPBT grid">
+              <div class="StorySectionWrapper_ContentContainer__HvMko grid">
+                <article class="StoryIntro_StoryIntro__Nb95A">
+                  <div>
+                    <p data-stagger="0.1" class="StoryIntro_text__dApqr"
+                      style="opacity:0;filter:blur(4px);transform:translateY(10px) scale(0.8)">Before a wand is
+                      chosen, the world trembles with prophecy and fractured loyalties. As myth bleeds into history and
+                      magic shadows every choice, a tale unfolds of wizards and muggles, of rising storms and ancient
+                      hopes, where the future of the Wizarding World waits to be forged in fire.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="visually-hidden" role="presentation" aria-hidden="true"></div>
+    </main>
+    <div class="PageTransition_page-transition__fsHrG"></div>
+    <article class="Cursor_Cursor__rdIFa"><canvas id="cursor-canvas"></canvas></article>
+  </div>
+  <script src="/custom-events-loader.js" defer></script>
+  <script id="__NEXT_DATA__" find the main split container. let container=targetTextElement.parentElement; let
+    mainWrapper=null; // Traverse up to find the grid/flex container that holds both image and text side-by-side while
+    (container && container !==document.body) { const style=window.getComputedStyle(container); // The original has a
+    grid or flex layout // Also looking for class names previously seen if
+    (container.className.includes('ContentContainer') || container.className.includes('StorySectionWrapper_content') ||
+    container.className.includes('StorySplitWithCentralDivider')) { mainWrapper=container; // We want the highest level
+    container that wraps just THIS section if (container.className.includes('StorySectionWrapper_ContentContainer')) {
+    break; } } container=container.parentElement; } if (!mainWrapper) { console.log("Antigravity: Could not find main
+    wrapper"); return; } // Check if we already patched this specific wrapper if
+    (mainWrapper.getAttribute('data-patched')==='true' ) { // Ensure no React re-render brought back the old stuff const
+    unwantedImg=mainWrapper.querySelector('img'); if (unwantedImg && !unwantedImg.closest('.hackathon-card')) {
+    console.log("Antigravity: Detected React rollback! Re-patching..."); } else { return; } } console.log("Antigravity:
+    Patching container", mainWrapper); mainWrapper.innerHTML='' ; mainWrapper.setAttribute('data-patched', 'true' ); //
+    2. Set styles on wrapper mainWrapper.style.display='flex' ; mainWrapper.style.flexDirection='column' ;
+    mainWrapper.style.alignItems='center' ; mainWrapper.style.justifyContent='center' ; mainWrapper.style.width='100%' ;
+    mainWrapper.style.padding='2rem 0' ; // 3. Inject Content const contentDiv=document.createElement('div');
+    contentDiv.style.width='100%' ; contentDiv.style.display='flex' ; contentDiv.style.justifyContent='center' ;
+    contentDiv.innerHTML=` <div class="hackathon-container"
+    style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <h2 class="hackathon-title"
+      style="font-family: 'Cinzel', serif; font-size: 3rem; margin-bottom: 2rem; color: white; border-bottom: 3px solid #f59e0b; padding-bottom: 0.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.3);">
+      What We Provide</h2>
+
+    <div class="hackathon-grid" style="display: flex; flex-direction: column; gap: 2rem; width: 90%; max-width: 800px;">
+
+      <!-- Facilities Card -->
+      <div class="hackathon-card card-facilities"
+        style="border-radius: 20px; padding: 2rem; backdrop-filter: blur(10px); border: 1px solid rgba(64, 123, 255, 0.3); background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(23, 42, 69, 0.6)); box-shadow: 0 0 20px rgba(64, 123, 255, 0.2); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+        <div class="card-header"
+          style="display: flex; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 1rem;">
+          <span class="card-icon-lg" style="font-size: 2rem; margin-right: 1rem;">🔷</span>
+          <span class="card-title" style="font-size: 1.8rem; font-weight: bold; color: #e2e8f0;">Facilities</span>
+        </div>
+        <div class="items-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(30, 58, 138, 0.4); border: 1px solid rgba(59, 130, 246, 0.2); color: #bfdbfe;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">📡</span> High-Speed WiFi
+          </div>
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(30, 58, 138, 0.4); border: 1px solid rgba(59, 130, 246, 0.2); color: #bfdbfe;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">⚡</span> Charging Stations
+          </div>
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(30, 58, 138, 0.4); border: 1px solid rgba(59, 130, 246, 0.2); color: #bfdbfe;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">🍔</span> 24/7 Food
+          </div>
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(30, 58, 138, 0.4); border: 1px solid rgba(59, 130, 246, 0.2); color: #bfdbfe;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">🛋️</span> Rest Zones
+          </div>
+        </div>
+      </div>
+
+      <!-- Treasures Card -->
+      <div class="hackathon-card card-treasures"
+        style="border-radius: 20px; padding: 2rem; backdrop-filter: blur(10px); border: 1px solid rgba(245, 158, 11, 0.3); background: linear-gradient(135deg, rgba(40, 20, 10, 0.8), rgba(60, 30, 15, 0.6)); box-shadow: 0 0 20px rgba(245, 158, 11, 0.2); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+        <div class="card-header"
+          style="display: flex; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 1rem;">
+          <span class="card-icon-lg" style="font-size: 2rem; margin-right: 1rem;">⭐</span>
+          <span class="card-title" style="font-size: 1.8rem; font-weight: bold; color: #fce7b0;">Treasures</span>
+        </div>
+        <div class="items-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(120, 53, 15, 0.4); border: 1px solid rgba(245, 158, 11, 0.2); color: #fde68a;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">💰</span> Cash Prizes
+          </div>
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(120, 53, 15, 0.4); border: 1px solid rgba(245, 158, 11, 0.2); color: #fde68a;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">🟢</span> Mentorship
+          </div>
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(120, 53, 15, 0.4); border: 1px solid rgba(245, 158, 11, 0.2); color: #fde68a;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">🎁</span> Cool Swag
+          </div>
+          <div class="item-badge"
+            style="display: flex; align-items: center; padding: 0.8rem; border-radius: 12px; font-family: sans-serif; font-size: 0.9rem; font-weight: 500; background: rgba(120, 53, 15, 0.4); border: 1px solid rgba(245, 158, 11, 0.2); color: #fde68a;">
+            <span class="item-icon" style="margin-right: 0.8rem; font-size: 1.2rem;">📜</span> Certificates
+          </div>
+        </div>
+      </div>
+    </div>
+  </div >
+  `;
+
+  mainWrapper.appendChild(contentDiv);
+  }
+
+  // Initial Run
+  patchUI();
+
+  // Polling is safer than MutationObserver for fighting hydration in some cases
+  setInterval(patchUI, 500);
+
+  // Also observe
+  const observer = new MutationObserver((mutations) => {
+  patchUI();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  })();
+    </script>
+  <script id="__NEXT_DATA__"
+    type="application/json">{"props":{"pageProps":{"data":{"story":{"seo":{"title":"The Boy Who Lived | Harry Potter","description":"Explore the magic of the Wizarding World | Exclusively on Hogwarts+","twitterCard":null,"image":{"id":"H6-o49ExRXeUfdW5M-MM0A","filename":"story-social.png","url":"/images/1.jpg","alt":null,"width":1200,"height":630,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLChUQDg4NDQ4NFx0PFhENFxUZGBYfIhUaHysjGh0oHSEWMDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OEQ8MEC8cFhwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA0AGAMBIgACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAAABQYB/8QAHRAAAQQDAQEAAAAAAAAAAAAAAQACAxEEBSFBIv/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAhIB/9oADAMBAAIRAxAPwBDo88Mmsp23cxjNHVH4vw80thkc7P6fUOqIulpsdvG+uoSCdtkWUI4Fo//2Q==","focalPoint":{"x":0.5,"y":0.5},"video":null}},"foldMedia":{"webpUrl":"/images/1.jpg?fm=webp","avifUrl":"/images/1.jpg?fm=avif","id":"EmhbIy6cTVyDCH_s5-Vx7Q","filename":"key-art-header-v4.png","url":"/images/1.jpg","alt":null,"width":1920,"height":1080,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLChYTDhgQFRUZDh0VFhUNFxUdGBYVFhUaHysjJh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0NEBANHC8cFh0vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAZAAABBQAAAAAAAAAAAAAAAAAHAAEDBAX/xAAeEAABBAIDAQAAAAAAAAAAAAABAAIDBQQiBhIhEf/EABYBAQEBAAAAAAAAAAAAAAAAAAMEAv/EABkRAAIDAQAAAAAAAAAAAAAAAAABAgMUE//aAAwDAQACEQMRAD8Ap1FyYs/6St1nK2tsm7BChlrKzL8UuNZTS2PpKnsoTFjMKtvyeOaQDsE6FtjnzDJGxSR5ka6n/9k=","focalPoint":{"x":0.5,"y":0.5},"video":null},"introBackground":{"webpUrl":"/images/2.jpg?fm=webp","avifUrl":"/images/2.jpg?fm=avif","id":"PkDIyHeASRuk2SGFgxmJnw","filename":"tpc_d742.jpg","url":"/images/2.jpg","alt":null,"width":4096,"height":2731,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBg8QCAgNDQ0QDg0ODg0ODhYNDREOFxMZGBYTFhUmHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0PHQ4MEC8oFh4vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAZAAADAAMAAAAAAAAAAAAAAAAAAwQBAgf/xAAdEAACAgIDAQAAAAAAAAAAAAAAAgEDBCExMjMT/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAQD/8QAFxEBAQEBAAAAAAAAAAAAAAAAABIBAv/aAAwDAQACEQMRAD8A5NSitQaKqwX0YkfDQuMBpnRVOsaxLKRCgV2YFsJwYE6Vytx/EfSAGycy3oAAB//Z","focalPoint":{"x":0.5,"y":0.5},"video":null},"introTitle":{"title":"<p><em>This is the story of the Boy Who Lived.</em></p>\n"},"introText":"But there’s more to Harry than his scar. To understand him, you have to understand the magic. \nThe Wizarding World. And you have to understand Dumbledore.","firstMedia":{"id":"dummy-id","filename":"dummy.png","url":"/images/3.jpg","alt":"","width":100,"height":100,"title":null,"blurUpThumb":"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7","focalPoint":{"x":0.5,"y":0.5},"video":null},"firstTitle":{"title":"<p><em>What We Provide</em></p>\n"},"firstText":"Facilities: High-Speed WiFi, Charging Stations, 24/7 Food, Rest Zones. | Treasures: Cash Prizes, Mentorship, Cool Swag, Certificates.","secondTitle":{"title":"<p><em>A World of Magic</em></p>\n"},"secondText":"In the wake of the war, wizards forge new lives among the muggles of\nBritain. As houses clash and dark arts stir, a wise headmaster named Dumbledore rises, \nuniting houses through wisdom, magic, and an otherworldly calling that hints at a \ngreater destiny still to come.","secondQuote":{"title":"<p><em>Magic whispers as destiny gathers in the shadows of Hogwarts castle.</em></p>\n"},"secondMedia":{"id":"ZjuGkRBuRAW5heY0KnJd3w","filename":"new-world.png","url":"/images/4.jpg","alt":null,"width":900,"height":1124,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLFRULDhgNGhAVDh0VFg4TJhkZGCIfFiEdHysjGh0oHRUiJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg4OHA0QEC8oFigvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIABgAEwMBIgACEQEDEQH/xAAbAAEAAgIDAAAAAAAAAAAAAAAABQYEBwECA//EACEQAAICAgEEAwAAAAAAAAAAAAECAAMEBRMRISKRBjFB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDAP/EABURAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIRAxAPwDJ+FYmDVqGrLjuJ2ydPii4srDuZR9bs7cWoKth9yeO1PCjs8nZlgXR0lQesTwp3VXCnn+RJi1jqq3vxA5MlMxmXEUdYiVoHFV9nEvkfqIiKz//2Q==","focalPoint":{"x":0.5,"y":0.5},"video":null},"thirdMedia":{"id":"NqqtMIfnTpi4nOpLNXhw5w","filename":"making-of-merlin.png","url":"/images/5.jpg","alt":null,"width":1108,"height":1108,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoIDggLDw4LDhgZDhcNDhMNDQ0NIxMaIiIVFhUaHysjGh0oHRUWJTUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHBAQHS8fFh07LzUvLy8vLy8vLy8vLy8vLy8vLzUvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIABgAGAMBIgACEQEDEQH/xAAZAAADAAMAAAAAAAAAAAAAAAAABQYBAgT/xAAgEAABBAIBBQAAAAAAAAAAAAACAAEDBAYRMQUSEyFR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAMC/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwAAhEDEQA/AJ6nZ8FJxTbozlKDlpJrU0EYMO2VDj9quNZuFNVN5exCHCyuzM5Ing7tMhBJ2rJE7e076PZcQFtrKEGmYzs1EfroQhajNr//2Q==","focalPoint":{"x":0.5,"y":0.5},"video":null},"thirdTitle":{"title":"<p>Before the Sorting Hat, a prophecy is birthed in lightning, scars, and love.</p>\n"},"thirdText":"In a world divided by light and dark, a boy's rising legend entwines with the fate of a dark lord. From the shadows of prophecy and loss, one will emerge, a wizard, a hero, called to shape a future not yet born, and to awaken the hope of a magical world.","fourthText":"Before a wand is chosen, the world trembles with prophecy and fractured loyalties. As myth bleeds into history and magic shadows every choice, a tale unfolds of wizards and muggles, of rising storms and ancient hopes, where the future of the Wizarding World waits to be forged in fire.","fourthBackground":{"webpUrl":"/images/6.jpg?fm=webp","avifUrl":"/images/6.jpg?fm=avif","id":"EBSXCqlyT0WcsnE1X9E7jg","filename":"closing-v4.png","url":"/images/6.jpg","alt":null,"width":6144,"height":4096,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoKCAgLCgoTDhAODg0ODhoNFg0YFxMZGBYVFiEaHysjGh0oHRUiJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OFQ0NHC8oFhwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIABAAGAMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAFAAT/xAAdEAACAgIDAQAAAAAAAAAAAAABAwACBDERITIF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwH/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQISIRH/2gAMAwAAhEDEQA/AAGfSXkV3DnsRY92EHqy9FbmG+Sws9GG3IVVHMwoCtygzmGyhyZSaXsT/9k=","focalPoint":{"x":0.5,"y":0.5},"video":null},"outroText":"Raised in the shadow of the stairs, Harry grows into a bridge between the muggle world and a new \nhope. As wizard and seeker, aura and friend, he faces betrayal, loss, and the rising tide of\ndarkness. Yet through it all, he prepares the way for a peace yet unborn, a peace that will unite the\nhouses, restore the school, and bring forth the age of Hogwarts.","outroBackground":{"webpUrl":"/images/7.png?fm=webp","avifUrl":"/images/7.png?fm=avif","id":"GZuUid35SgemMFTdwoWnlg","filename":"b078c41251a41c07bbcc5f0c93335136b8245c622.jpg","url":"/images/7.png","alt":null,"width":3000,"height":2000,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBg8ICAgPDgoODRgOCA4NDBENFggYFxUZGBYVFhUmHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0NFQwOEC8cFigvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIABAAGAMBIgACEQEDEQH/xAAZAAACAwAAAAAAAAAAAAAAAAAABQIDB//EAB0QAAICAQUAAAAAAAAAAAAAAAABAgMRBBIUIWH/xAAWAQEBAAAAAAAAAAAAAAAAAABAgD/xAAVEQEBAAAAAAAAAAAAAAAAAAASAP/aAAwDAQACEQMRAD8Ay3k5L69UtuGLozSiSU1glQJxVfBrtgKYW+gZQL//2Q==","focalPoint":{"x":0.5,"y":0.5},"video":null}}},"navigation":{"navigation":{"id":"G7z1utZXRmWtbCnYs4G1UA","items":[{"id":"C6WXCMVWTMO7zKv2V7_kEA","route":{"title":"Home","href":"#"},"video":{"id":"f49NSPAySfeFvj7duM4Jhg","filename":"pendragon-site-home-gif-1.mp4","url":"https://www.datocms-assets.com/154264/1752744516-pendragon-site-home-gif-1.mp4","alt":null,"width":1280,"height":720,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBhYPCAgSDg4LDg4PDQ0NDBkNFgoYFx0ZGCIVFiEaHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLAg0OHA4NHDscFh0vLy8vLy87Oy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAYAAACAwAAAAAAAAAAAAAAAAAABQMEBv/EABwQAAICAgMAAAAAAAAAAAAAAAACAwUBMQQGIf/EABUBAQEAAAAAAAAAAAAAAAAAAAUD/8QAHBEAAAcBAQAAAAAAAAAAAAAAAAEDBAUxUREC/9oADAMBAAIRAxAPwCOu48iDJ0dlMhWdhndfcDdbmXK6BSZzGhlRzDmdC9JlkATz2cjZ0BM2kxop5WhuUP/2Q==","focalPoint":null,"video":{"muxPlaybackId":"600ua1slfmLeOf3CiW1202FJ01zN2E701Rh5","thumbnailUrl":"https://image.mux.com/600ua1slfmLeOf3CiW1202FJ01zN2E701Rh5/thumbnail.jpg","mp4Url":"https://stream.mux.com/600ua1slfmLeOf3CiW1202FJ01zN2E701Rh5/high.mp4","streamingUrl":"https://stream.mux.com/600ua1slfmLeOf3CiW1202FJ01zN2E701Rh5.m3u8","muxAssetId":"Vwl5CmnPvkbo8BVSX8t01hF4CbEWfIC91","duration":10}}},{"id":"IwhoL96lRXW2GfOh9udFvQ","route":{"title":"Story","href":"#"},"video":{"id":"K-Z989M1T5CGb0FtQt6rTg","filename":"pendragon-site-story-loop-1.mp4","url":"https://www.datocms-assets.com/154264/1751269938-pendragon-site-story-loop-1.mp4","alt":null,"width":2048,"height":1152,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgQDQoLDhgQDQ0NEhINDg4OFx8dGBYTFiEaHysjGh0oHSEWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHAwMHC8cFh01Ly8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAAABQYD/8QAHhAAAQQCAwEAAAAAAAAAAAAAAQACAwUEBjFBURH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAgH/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREC/9oADAMBAAIRAxAPwDLa3OFSQpekrTLhPkKoNqnJrSl1LMWUshA6RsWCRjrz248hb94QlGv5L5c14PqFDTpp//Z","focalPoint":null,"video":{"muxPlaybackId":"3oUx00iFACWzfusQFp17P017PxB9029TF4h","thumbnailUrl":"https://image.mux.com/3oUx00iFACWzfusQFp17P017PxB9029TF4h/thumbnail.jpg","mp4Url":"https://stream.mux.com/3oUx00iFACWzfusQFp17P017PxB9029TF4h/high.mp4","streamingUrl":"https://stream.mux.com/3oUx00iFACWzfusQFp17P017PxB9029TF4h.m3u8","muxAssetId":"uetmhvHZ01CR005WZHwIokoHNMIaGMfez1","duration":12}}},{"id":"fFb_mnRPQaut_7mQf-hqNQ","route":{"title":"Map","href":"#"},"video":{"id":"eN0h150fQOKMMFyNebK-Gg","filename":"map1.mp4","url":"https://www.datocms-assets.com/154264/1751269938-map1.mp4","alt":null,"width":1280,"height":720,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgRCgoLDhgQDhcNDhUQEh0YGh8dGBYVIhUaHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHA0QFTscFh07Ly8vLzsvLzUvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAYAAACAwAAAAAAAAAAAAAAAAAEBgADB//EAB8QAAEEAgIDAAAAAAAAAAAAAAEAAgMEBhJBUQUhI//EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAExIf/aAAwDAQACEQMRAD8ABwXV8YaSj86qNjpbJZw+0+KVoB5TZmX28OCekNnVs0kpRz1PZUVNqV0NY6lRPMS//9k=","focalPoint":null,"video":{"muxPlaybackId":"rJ8H00t9ukta7TOH9FPPgbZ6I699m8kIB","thumbnailUrl":"https://image.mux.com/rJ8H00t9ukta7TOH9FPPgbZ6I699m8kIB/thumbnail.jpg","mp4Url":"https://stream.mux.com/rJ8H00t9ukta7TOH9FPPgbZ6I699m8kIB/high.mp4","streamingUrl":"https://stream.mux.com/rJ8H00t9ukta7TOH9FPPgbZ6I699m8kIB.m3u8","muxAssetId":"inlHb14tFHWCGvS4W01Fbbrx4jqHEAP601","duration":8}}},{"id":"UZG5GDL0SJu4RZT5AGclUw","route":{"title":"Episodes","href":"#"},"video":{"id":"M5BbXoKXQTilrgsj556E9g","filename":"pendragon-site-episodes-loop-1.mp4","url":"https://www.datocms-assets.com/154264/1751269938-pendragon-site-episodes-loop-1.mp4","alt":null,"width":2048,"height":1152,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgLFQ0NDhgNDA0NDRENDREWFxUZGBYVFhUaHysjGh0oHRUiJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg4OHBANHC8cFhw7Ly8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAXAAACAwAAAAAAAAAAAAAAAAAABQMEB//EAB4QAAEDBAMAAAAAAAAAAAAAAAABAiEDBAUREiIx/8QAFgEBAQEAAAAAAAAAAAAAAAAABAMC/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERAgP/2gAMAwEAAhEDEQAAs3xjH78GdSk7SQVMQ/b0gcXaojEgJ1borCUFNzSXgBNcP6AVy3DDlP/2Q==","focalPoint":null,"video":{"muxPlaybackId":"dn6uD3GQ3QsBXUAiHWQ3i6q5sqbLraEr","thumbnailUrl":"https://image.mux.com/dn6uD3GQ3QsBXUAiHWQ3i6q5sqbLraEr/thumbnail.jpg","mp4Url":"https://stream.mux.com/dn6uD3GQ3QsBXUAiHWQ3i6q5sqbLraEr/high.mp4","streamingUrl":"https://stream.mux.com/dn6uD3GQ3QsBXUAiHWQ3i6q5sqbLraEr.m3u8","muxAssetId":"bFHxg01ZFVV00Fj82usYhGgCmmoF1gzbhE","duration":11}}},{"id":"NwTX_edfSbK9z7QrhzZCvw","route":{"title":"People","href":"#"},"video":{"id":"VN_bZji0R-SEoFdtwXMmWQ","filename":"pendragon-site-character-loop-1.mp4","url":"https://www.datocms-assets.com/154264/1751269938-pendragon-site-character-loop-1.mp4","alt":null,"width":2048,"height":1152,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoQCAgLDQgQDRgOCAYNDiEODgkYFxUZGBYVFhUaHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg4OGBANHDscFhwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAYAAACAwAAAAAAAAAAAAAAAAABBQADB//EABwQAAEFAAMAAAAAAAAAAAAAAAEAAgMEMhQhMf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAZEQACAwEAAAAAAAAAAAAAAAAAAgESIhH/2gAMAwEAAhEDEQA/AM+MUHF0EAyAVfUqEjzW0VYGuNXSNDMqNIo6/H0EUnJc2t04qI4w2U//2Q==","focalPoint":null,"video":{"muxPlaybackId":"U100ePHjH2UehYBLm42yPkxz6KgQT8xnZ","thumbnailUrl":"https://image.mux.com/U100ePHjH2UehYBLm42yPkxz6KgQT8xnZ/thumbnail.jpg","mp4Url":"https://stream.mux.com/U100ePHjH2UehYBLm42yPkxz6KgQT8xnZ/high.mp4","streamingUrl":"https://stream.mux.com/U100ePHjH2UehYBLm42yPkxz6KgQT8xnZ.m3u8","muxAssetId":"F02h5SMQMjyxzgnP00sJylfhvn014r95iWW","duration":7}}},{"id":"CSGPHJQoR2msTIFAgvxwHw","route":{"title":"Lineages","href":"#"},"video":{"id":"SWV9PooLRWOe1Gmfv99nkA","filename":"lineage-v3.mp4","url":"/images/1.jpgmp4","alt":null,"width":1920,"height":1080,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAgFCgoFBQwFBQUFBREJCgUMFxMZGBYTFhUaHysjGh0oHRUWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLBQUFEAUFEC8cFhwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAVAAEBAAAAAAAAAAAAAAAAAAAAB//EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAVAQEBAAAAAAAAAAAAAAAAAAACAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwAAhEDEQA/AJkAJACT/9k=","focalPoint":null,"video":{"muxPlaybackId":"9021IYRY7nyULVQwGXxdaa1QfLfy302j5R","thumbnailUrl":"https://image.mux.com/9021IYRY7nyULVQwGXxdaa1QfLfy302j5R/thumbnail.jpg","mp4Url":"https://stream.mux.com/9021IYRY7nyULVQwGXxdaa1QfLfy302j5R/high.mp4","streamingUrl":"https://stream.mux.com/9021IYRY7nyULVQwGXxdaa1QfLfy302j5R.m3u8","muxAssetId":"uFlhvIupwdMtwjjT00PZmlHkgk5GnM1ky","duration":7}}},{"id":"YgV1xoBYSiu5TLpfpDyywg","route":{"title":"Subscribe","href":"#"},"video":{"id":"dUAgvvuIRumnooDh2SLD-g","filename":"pendragon-subscribe-menu_1280x720.mp4","url":"https://www.datocms-assets.com/154264/1752744516-pendragon-subscribe-menu_1280x720.mp4","alt":null,"width":1280,"height":720,"title":null,"blurUpThumb":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoNFAgKDQ0NDg8NDA0NChENDQ4YFxMZGCITFhUaHysjGh0oHRYWJDUlKC0vMjIyGSI4PTcwPCsxMi8BCgsLDg0OHBAQHDsoFhwvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAA4AGAMBIgACEQEDEQH/xAAXAAEAAwAAAAAAAAAAAAAAAAAFAAMH/8QAGxAAAwEAAwEAAAAAAAAAAAAAAAEDAhITIyH/xAAVAQEBAAAAAAAAAAAAAAAAAAACIf/EABcRAQEBAQAAAAAAAAAAAAAAAAECAAP/2gAMAwAAhEDEQA/AMihjPahSkk5BkMeq+jmZJwDblzlcP0rmQupnjRkKVqw7//Z","focalPoint":null,"video":{"muxPlaybackId":"bVUULZd5G00GOWWzc9WNCeqPU74GyQN2L","thumbnailUrl":"https://image.mux.com/bVUULZd5G00GOWWzc9WNCeqPU74GyQN2L/thumbnail.jpg","mp4Url":"https://stream.mux.com/bVUULZd5G00GOWWzc9WNCeqPU74GyQN2L/high.mp4","streamingUrl":"https://stream.mux.com/bVUULZd5G00GOWWzc9WNCeqPU74GyQN2L.m3u8","muxAssetId":"2oibwzG6bujCLptnlXraolpurR5C7OQB","duration":5}}}]}},"siteSettings":{"setting":{"fullSiteSwitch":true}}},"__N_SSG":true},"page":"/story","query":{},"buildId":"CH7vR9QGq3zCFg-Q-gae2","isFallback":false,"gsp":true,"scriptLoader":[]}</script>
+  <script defer src="assets/js/beacon.js"
+    data-cf-beacon='{"version":"2024.11.0","token":"33b693f98f5643f5ad6c5eb894dedaa9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'></script>
+</body>
+
+</html>
