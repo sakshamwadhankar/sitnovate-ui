@@ -508,7 +508,7 @@
           width: 100%;
           height: 100%;
           object-fit: contain;
-          filter: grayscale(1);
+          filter: grayscale(0);
           transition: all 0.5s;
           transform: rotate(-45deg);
         }

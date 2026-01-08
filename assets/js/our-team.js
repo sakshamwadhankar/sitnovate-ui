@@ -1,9 +1,43 @@
 /**
- * Our Team Section - Enhanced Card Theme
- * Golden, Brown, Black theme with larger, more impactful cards
+ * Our Team Section - Infinite Horizontal Scrolling Carousel
+ * Side-scrolling curved gallery with auto-loop
  */
 (function () {
   'use strict';
+
+  // Team members data - duplicated for infinite loop effect
+  const teamMembers = [
+    {
+      name: "Priya Das",
+      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Priya&backgroundColor=b88a44",
+      linkedin: "https://www.linkedin.com/in/priyadas"
+    },
+    {
+      name: "Aditya Sharma",
+      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Aditya&backgroundColor=b88a44",
+      linkedin: "https://www.linkedin.com/in/adityasharma"
+    },
+    {
+      name: "Riya Patel",
+      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Riya&backgroundColor=b88a44",
+      linkedin: "https://www.linkedin.com/in/riyapatel"
+    },
+    {
+      name: "Arjun Singh",
+      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Arjun&backgroundColor=b88a44",
+      linkedin: "https://www.linkedin.com/in/arjunsingh"
+    },
+    {
+      name: "Sanya Mehta",
+      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Sanya&backgroundColor=b88a44",
+      linkedin: "https://www.linkedin.com/in/sanyamehta"
+    },
+    {
+      name: "Vikram Malhotra",
+      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Vikram&backgroundColor=b88a44",
+      linkedin: "https://www.linkedin.com/in/vikrammalhotra"
+    }
+  ];
 
   function initTeam() {
     const sectionWrappers = document.querySelectorAll('.StorySectionWrapper_wrapper__o7CDl');
@@ -26,137 +60,93 @@
 
     const customWrapper = document.createElement('div');
     customWrapper.className = 'team-fullpage';
+
+    // Generate team cards HTML - duplicate for seamless loop
+    const generateCard = (member, index) => `
+      <div class="team-card" data-index="${index}">
+        <div class="card-image-container">
+          <img src="${member.image}" alt="${member.name}" class="card-image" draggable="false" />
+        </div>
+        <div class="card-info">
+          <h3 class="card-name">${member.name}</h3>
+          <a href="${member.linkedin}" target="_blank" rel="noopener noreferrer" class="card-connect-btn" onclick="event.stopPropagation();">
+            <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span>CONNECT</span>
+          </a>
+        </div>
+      </div>
+    `;
+
+    // Create cards - triple them for smooth infinite scroll
+    const allCards = [...teamMembers, ...teamMembers, ...teamMembers];
+    const cardsHTML = allCards.map((member, index) => generateCard(member, index)).join('');
+
     customWrapper.innerHTML = `
       <div class="team-inner">
         <!-- Header -->
         <div class="team-header">
-          <div class="header-deco">
-            <span class="deco-line-l"></span>
-            <span class="deco-gem">◆</span>
-            <span class="deco-line-r"></span>
-          </div>
-          <h2 class="team-main-title">Our Team</h2>
-          <p class="team-subtitle">The Wizards Behind the Magic</p>
+          <h2 class="team-title">OUR TEAM</h2>
+          <div class="title-underline"></div>
         </div>
 
-        <!-- Cards Grid -->
-        <div class="team-cards-grid">
-          
-          <!-- Card 1 - President -->
-          <div class="team-member-card">
-            <div class="card-shine"></div>
-            <div class="card-border-glow"></div>
-            <div class="card-content">
-              <div class="member-avatar">
-                <div class="avatar-frame">
-                  <div class="avatar-inner">
-                    <span class="avatar-emoji">🧙</span>
-                  </div>
-                </div>
-                <div class="avatar-glow"></div>
-              </div>
-              <h3 class="member-name">Sunidhi Haware</h3>
-              <span class="member-role">PRESIDENT</span>
-              <span class="member-dept">Student Representative Council</span>
-              <div class="member-badge">
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-              </div>
-            </div>
+        <!-- Scrolling Container -->
+        <div class="team-carousel-container">
+          <div class="team-carousel-track">
+            ${cardsHTML}
           </div>
-
-          <!-- Card 2 - Vice President -->
-          <div class="team-member-card">
-            <div class="card-shine"></div>
-            <div class="card-border-glow"></div>
-            <div class="card-content">
-              <div class="member-avatar">
-                <div class="avatar-frame">
-                  <div class="avatar-inner avatar-initials">
-                    <span>PR</span>
-                  </div>
-                </div>
-                <div class="avatar-glow"></div>
-              </div>
-              <h3 class="member-name">Prathmesh Rajpurkar</h3>
-              <span class="member-role">VICE PRESIDENT</span>
-              <span class="member-dept">Student Representative Council</span>
-              <div class="member-badge">
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 - Lead -->
-          <div class="team-member-card">
-            <div class="card-shine"></div>
-            <div class="card-border-glow"></div>
-            <div class="card-content">
-              <div class="member-avatar">
-                <div class="avatar-frame">
-                  <div class="avatar-inner">
-                    <span class="avatar-emoji">⚡</span>
-                  </div>
-                </div>
-                <div class="avatar-glow"></div>
-              </div>
-              <h3 class="member-name">Parth Choudhary</h3>
-              <span class="member-role">LEAD</span>
-              <span class="member-dept">Event Management</span>
-              <div class="member-badge">
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 - Web Dev -->
-          <div class="team-member-card">
-            <div class="card-shine"></div>
-            <div class="card-border-glow"></div>
-            <div class="card-content">
-              <div class="member-avatar">
-                <div class="avatar-frame">
-                  <div class="avatar-inner">
-                    <span class="avatar-emoji">🏰</span>
-                  </div>
-                </div>
-                <div class="avatar-glow"></div>
-              </div>
-              <h3 class="member-name">Jash Chauhan</h3>
-              <span class="member-role">WEB DEVELOPMENT</span>
-              <span class="member-dept">Technical Team</span>
-              <div class="member-badge">
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-                <span class="badge-dot"></span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     `;
 
     contentContainer.appendChild(customWrapper);
 
+    // Initialize infinite scroll
+    const track = customWrapper.querySelector('.team-carousel-track');
+    let scrollPosition = 0;
+    const scrollSpeed = 0.5; // pixels per frame
+    const cardWidth = 350; // card width + gap
+    const totalCards = teamMembers.length;
+    const resetPoint = cardWidth * totalCards;
+
+    function animate() {
+      scrollPosition += scrollSpeed;
+
+      // Reset position for infinite loop
+      if (scrollPosition >= resetPoint) {
+        scrollPosition = 0;
+      }
+
+      track.style.transform = `translateX(-${scrollPosition}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    // Start animation
+    animate();
+
+    // Pause on hover
+    track.addEventListener('mouseenter', () => {
+      track.style.animationPlayState = 'paused';
+    });
+
+    track.addEventListener('mouseleave', () => {
+      track.style.animationPlayState = 'running';
+    });
+
     // Styles
-    if (!document.getElementById('team-enhanced-styles')) {
+    if (!document.getElementById('team-styles')) {
       const styles = document.createElement('style');
-      styles.id = 'team-enhanced-styles';
+      styles.id = 'team-styles';
       styles.textContent = `
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 
         .team-fullpage {
           position: absolute;
           top: 0; left: 0; right: 0; bottom: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(160deg, #0a0805 0%, #1a1510 50%, #0d0a08 100%);
+          background: #000;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -166,263 +156,194 @@
 
         .team-inner {
           width: 100%;
-          max-width: 1300px;
-          padding: 2rem;
+          max-width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 2.5rem;
+          gap: 3rem;
+          padding: 2rem 0;
         }
 
         /* Header */
         .team-header {
           text-align: center;
+          z-index: 10;
         }
 
-        .header-deco {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 1rem;
-          margin-bottom: 0.75rem;
-        }
-        .deco-line-l, .deco-line-r { height: 2px; width: 5rem; }
-        .deco-line-l { background: linear-gradient(90deg, transparent, #d4af37); }
-        .deco-line-r { background: linear-gradient(-90deg, transparent, #d4af37); }
-        .deco-gem {
-          color: #d4af37;
-          font-size: 1rem;
-          text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-        }
-
-        .team-main-title {
+        .team-title {
           font-family: 'Cinzel', serif;
-          font-size: clamp(2.5rem, 5vw, 4rem);
-          font-weight: 700;
+          font-size: clamp(2rem, 5vw, 3rem);
+          font-weight: 600;
           color: #d4af37;
-          text-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+          letter-spacing: 0.3em;
           margin: 0;
-          letter-spacing: 0.1em;
+          text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
-        .team-subtitle {
-          font-family: 'Cinzel', serif;
-          font-size: 1rem;
-          color: #8b7355;
-          margin: 0.5rem 0 0;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
+        .title-underline {
+          width: 120px;
+          height: 2px;
+          background: #d4af37;
+          margin: 1rem auto 0;
+          opacity: 0.8;
         }
 
-        /* Cards Grid */
-        .team-cards-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 2rem;
+        /* Carousel Container */
+        .team-carousel-container {
           width: 100%;
+          overflow: hidden;
+          position: relative;
+          padding: 2rem 0;
+        }
+
+        /* Gradient Overlays */
+        .team-carousel-container::before,
+        .team-carousel-container::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 200px;
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        .team-carousel-container::before {
+          left: 0;
+          background: linear-gradient(to right, #000, transparent);
+        }
+
+        .team-carousel-container::after {
+          right: 0;
+          background: linear-gradient(to left, #000, transparent);
+        }
+
+        /* Carousel Track */
+        .team-carousel-track {
+          display: flex;
+          gap: 2rem;
+          will-change: transform;
         }
 
         /* Individual Card */
-        .team-member-card {
-          position: relative;
-          background: linear-gradient(145deg, #1a1512 0%, #0d0a08 100%);
-          border: 2px solid rgba(139, 115, 85, 0.4);
-          border-radius: 20px;
-          padding: 2.5rem 1.5rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        .team-card {
+          flex-shrink: 0;
+          width: 330px;
+          background: linear-gradient(145deg, #1a1a1a, #0f0f12);
+          border: 1px solid rgba(212, 175, 55, 0.3);
+          border-radius: 16px;
           overflow: hidden;
+          transition: all 0.4s ease;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          transform: perspective(1000px) rotateY(0deg);
         }
 
-        .team-member-card::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0; right: 0;
-          height: 4px;
-          background: linear-gradient(90deg, transparent, #d4af37, transparent);
-          opacity: 0;
-          transition: opacity 0.5s;
+        .team-card:hover {
+          transform: perspective(1000px) rotateY(5deg) translateY(-10px);
+          border-color: rgba(212, 175, 55, 0.6);
+          box-shadow: 0 12px 40px rgba(212, 175, 55, 0.3);
+          z-index: 10;
         }
 
-        .team-member-card:hover {
-          transform: translateY(-12px) scale(1.02);
-          border-color: #d4af37;
-          box-shadow: 
-            0 30px 60px rgba(0, 0, 0, 0.5),
-            0 0 40px rgba(212, 175, 55, 0.15),
-            inset 0 1px 0 rgba(212, 175, 55, 0.2);
-        }
-        .team-member-card:hover::before {
-          opacity: 1;
-        }
-
-        /* Card Shine Effect */
-        .card-shine {
-          position: absolute;
-          top: -100%;
-          left: -100%;
-          width: 50%;
-          height: 200%;
-          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-          transform: rotate(25deg);
-          transition: left 0.8s ease;
-          pointer-events: none;
-        }
-        .team-member-card:hover .card-shine {
-          left: 150%;
-        }
-
-        /* Border Glow */
-        .card-border-glow {
-          position: absolute;
-          inset: -2px;
-          border-radius: 22px;
-          background: linear-gradient(135deg, #d4af37, #8b5a2b, #d4af37);
-          opacity: 0;
-          filter: blur(8px);
-          transition: opacity 0.5s;
-          z-index: -1;
-        }
-        .team-member-card:hover .card-border-glow {
-          opacity: 0.3;
-        }
-
-        .card-content {
+        /* Card Image */
+        .card-image-container {
+          width: 100%;
+          height: 320px;
+          overflow: hidden;
           position: relative;
-          z-index: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          background: linear-gradient(135deg, #b88a44 0%, #8b6f47 100%);
         }
 
-        /* Avatar */
-        .member-avatar {
-          position: relative;
-          margin-bottom: 1.5rem;
-        }
-
-        .avatar-frame {
-          width: 120px;
-          height: 120px;
-          border-radius: 50%;
-          padding: 4px;
-          background: linear-gradient(135deg, #d4af37 0%, #8b5a2b 50%, #d4af37 100%);
-          position: relative;
-          z-index: 2;
-        }
-
-        .avatar-inner {
+        .card-image {
           width: 100%;
           height: 100%;
-          border-radius: 50%;
-          background: linear-gradient(145deg, #2a2520, #1a1512);
+          object-fit: cover;
+          transition: all 0.5s ease;
+        }
+
+        .team-card:hover .card-image {
+          transform: scale(1.08);
+        }
+
+        /* Card Info */
+        .card-info {
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          background: linear-gradient(to bottom, #15151a, #0a0a0c);
+          border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .card-name {
+          font-family: 'Cinzel', serif;
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #d4af37;
+          margin: 0;
+          letter-spacing: 0.05em;
+          text-align: center;
+          text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Connect Button */
+        .card-connect-btn {
           display: flex;
           align-items: center;
-          justify-content: center;
-          border: 2px solid #3a3028;
-        }
-
-        .avatar-emoji {
-          font-size: 3rem;
-          filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
-        }
-
-        .avatar-initials {
-          font-family: 'Cinzel', serif;
-          font-size: 2.2rem;
-          font-weight: 700;
-          color: #d4af37;
-          text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-
-        .avatar-glow {
-          position: absolute;
-          inset: -10px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
-          z-index: 1;
-          opacity: 0;
-          transition: opacity 0.5s;
-        }
-        .team-member-card:hover .avatar-glow {
-          opacity: 1;
-        }
-
-        /* Text */
-        .member-name {
-          font-family: 'Cinzel', serif;
-          font-size: 1.3rem;
-          font-weight: 700;
-          color: #f5f0e8;
-          margin: 0 0 0.5rem;
-          letter-spacing: 0.05em;
-        }
-
-        .member-role {
-          font-family: 'Cinzel', serif;
-          font-size: 0.85rem;
-          color: #d4af37;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          font-weight: 700;
-          margin-bottom: 0.3rem;
-        }
-
-        .member-dept {
-          font-size: 0.8rem;
-          color: #8b7355;
-          margin-bottom: 1.2rem;
-        }
-
-        /* Badge Dots */
-        .member-badge {
-          display: flex;
           gap: 0.5rem;
+          padding: 0.6rem 1.5rem;
+          background: rgba(212, 175, 55, 0.1);
+          border: 1px solid rgba(212, 175, 55, 0.4);
+          border-radius: 24px;
+          color: #d4af37;
+          font-family: 'Cinzel', serif;
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.15em;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          cursor: pointer;
         }
 
-        .badge-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #d4af37, #8b5a2b);
-          box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+        .card-connect-btn:hover {
+          background: #d4af37;
+          color: #000;
+          border-color: #d4af37;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+
+        .linkedin-icon {
+          width: 14px;
+          height: 14px;
+          transition: transform 0.3s ease;
+        }
+
+        .card-connect-btn:hover .linkedin-icon {
+          transform: scale(1.1);
         }
 
         /* Responsive */
-        @media (max-width: 1100px) {
-          .team-cards-grid {
-            grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 768px) {
+          .team-card {
+            width: 280px;
           }
-        }
 
-        @media (max-width: 600px) {
-          .team-cards-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+          .card-image-container {
+            height: 280px;
           }
-          .team-inner {
-            padding: 1rem;
-            gap: 1.5rem;
-          }
-          .team-member-card {
-            padding: 2rem 1rem;
-          }
-          .avatar-frame {
+
+          .team-carousel-container::before,
+          .team-carousel-container::after {
             width: 100px;
-            height: 100px;
-          }
-          .avatar-emoji {
-            font-size: 2.5rem;
           }
         }
       `;
       document.head.appendChild(styles);
     }
 
-    console.log('Our Team (Enhanced) initialized!');
+    console.log('Our Team infinite carousel initialized!');
   }
 
   if (document.readyState === 'loading') {
