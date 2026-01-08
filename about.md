@@ -179,25 +179,43 @@ const TextType = ({
 
 // --- Decorative SVG Components ---
 
-const CornerOrnament = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" fill="currentColor" className={className}>
-    <path d="M0,0 L30,0 C45,0 45,15 60,15 C75,15 85,5 100,0 L100,30 C95,45 80,45 80,60 C80,75 90,85 100,100 L70,100 C55,100 55,85 40,85 C25,85 15,95 0,100 L0,70 C5,55 20,55 20,40 C20,25 10,15 0,0 Z M10,10 L15,10 C20,10 20,20 10,20 L10,15 Z" />
-    <path d="M25,25 C40,25 40,40 25,40 C10,40 10,25 25,25 Z" opacity="0.5"/>
+const CornerAccent = ({ className, rotate = 0 }: { className?: string; rotate?: number }) => (
+  <svg 
+    viewBox="0 0 40 40" 
+    fill="none" 
+    className={className} 
+    style={{ transform: `rotate(${rotate}deg)` }}
+  >
+    <path d="M0,40 L0,10 C0,5 5,0 10,0 L40,0 L40,4 L12,4 C8,4 4,8 4,12 L4,40 Z" fill="currentColor" />
+    <circle cx="8" cy="8" r="2" fill="#FFD700" className="animate-pulse" />
   </svg>
 );
 
 const DividerOrnament = ({ className }: { className?: string }) => (
     <svg viewBox="0 0 200 20" fill="currentColor" className={className}>
         <path d="M100,10 L180,12 L190,10 L180,8 L100,10 M100,10 L20,12 L10,10 L20,8 L100,10" />
-        <circle cx="100" cy="10" r="3" />
+        <circle cx="100" cy="10" r="4" className="text-[#FFD700] drop-shadow-[0_0_8px_rgba(255,215,0,0.8)]" />
     </svg>
 )
 
-// --- Main App Component (Isolated Decree Box) ---
+// --- Main App Component ---
 
 export default function App() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      setMousePosition({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[#050505] text-[#d4cfc3] p-4 md:p-8 selection:bg-[#3d2b1f] selection:text-[#d4af37] flex items-center justify-center">
+    <div className="min-h-screen bg-[#050505] text-[#d4cfc3] p-4 md:p-8 selection:bg-[#3d2b1f] selection:text-[#d4af37] flex items-center justify-center overflow-hidden">
       
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
@@ -210,132 +228,158 @@ export default function App() {
           font-family: 'Cormorant Garamond', serif;
         }
         
-        /* Typography Scale & Spacing */
-        .tracking-cinema {
-          letter-spacing: 0.15em;
+        /* Shimmer Effect for Title */
+        .shimmer-text {
+            background: linear-gradient(to right, #b88a44 20%, #ffecb3 50%, #b88a44 80%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 4s linear infinite;
         }
-        
-        /* Cursor Styling */
-        .text-type {
-          display: inline-block;
-          white-space: pre-wrap;
-        }
-        .text-type__cursor {
-          margin-left: 0.05em;
-          display: inline-block;
-          opacity: 0.8;
-          font-weight: 200;
-          animation: text-type-blink infinite;
-          color: #d4af37; /* Muted Metallic Gold */
-        }
-        .text-type__cursor--hidden {
-          display: none;
-        }
-        @keyframes text-type-blink {
-          0%, 100% { opacity: 0.8; }
-          50% { opacity: 0.1; }
+        @keyframes shine {
+            to {
+            background-position: 200% center;
+            }
         }
 
-        /* Atmospheric Effects */
-        .vignette-bg {
-           background: radial-gradient(circle at 50% 50%, #1a1a1e 0%, #050505 85%);
+        /* Floating Animation */
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
         }
-        
-        .noise-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
-        /* Frame & Glows */
-        .magical-frame {
-           position: relative;
-           background: rgba(10, 10, 12, 0.6);
-           border: 1px solid rgba(212, 175, 55, 0.15);
-           box-shadow: 0 0 40px rgba(0,0,0,0.9) inset;
-        }
-        
-        /* Corners Cut (Chamfered) */
-        .chamfered-box {
-            clip-path: polygon(
-                20px 0, 100% 0, 
-                100% calc(100% - 20px), calc(100% - 20px) 100%, 
-                0 100%, 0 20px
+        /* Wand Light Effect */
+        .wand-light {
+            background: radial-gradient(
+                600px circle at var(--x) var(--y),
+                rgba(212, 175, 55, 0.15),
+                transparent 40%
             );
-        }
-
-        .candle-glow {
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
         }
         
-        .glass-panel {
-            backdrop-filter: blur(2px);
+        /* Gothic Plaque Shape */
+        .gothic-plaque {
+           position: relative;
+           background: rgba(12, 12, 15, 0.9);
+           /* Complex polygon clip-path for a 'Notched' look */
+           clip-path: polygon(
+             0% 20px,                 /* Top Left start */
+             20px 20px,               /* Top Left notch H */
+             20px 0%,                 /* Top Left notch V */
+             calc(100% - 20px) 0%,    /* Top Right notch V */
+             calc(100% - 20px) 20px,  /* Top Right notch H */
+             100% 20px,               /* Top Right start */
+             100% calc(100% - 20px),  /* Bottom Right start */
+             calc(100% - 20px) calc(100% - 20px), /* Bottom Right notch H */
+             calc(100% - 20px) 100%,  /* Bottom Right notch V */
+             20px 100%,               /* Bottom Left notch V */
+             20px calc(100% - 20px),  /* Bottom Left notch H */
+             0% calc(100% - 20px)     /* Bottom Left start */
+           );
+           
+           /* We use filter drop-shadow because box-shadow is clipped by clip-path */
+           filter: drop-shadow(0 0 20px rgba(0,0,0,0.8)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.15));
+           transition: filter 0.3s ease;
+        }
+        
+        .gothic-plaque:hover {
+           filter: drop-shadow(0 0 30px rgba(0,0,0,0.9)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.25));
+        }
+
+        .stat-glow:hover {
+            color: #ffecb3;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        
+        /* Inner Border Simulator */
+        .inner-border {
+             position: absolute;
+             inset: 4px;
+             background: transparent;
+             border: 1px solid rgba(212, 175, 55, 0.15);
+             clip-path: polygon(
+                 0% 20px, 20px 20px, 20px 0%, 
+                 calc(100% - 20px) 0%, calc(100% - 20px) 20px, 100% 20px, 
+                 100% calc(100% - 20px), calc(100% - 20px) calc(100% - 20px), calc(100% - 20px) 100%, 
+                 20px 100%, 20px calc(100% - 20px), 0% calc(100% - 20px)
+             );
+             pointer-events: none;
         }
       `}</style>
 
-      {/* Background Layers */}
-      <div className="fixed inset-0 vignette-bg pointer-events-none" />
-      <div className="noise-overlay" />
+      {/* Background Layers Removed */}
 
-      <div className="max-w-4xl w-full relative z-10">
+      <div className="max-w-4xl w-full relative z-10 float-animation" ref={containerRef} onMouseMove={handleMouseMove}>
         
-        {/* About SITNovate - Ornate Frame Implementation */}
-        <div className="relative">
-            {/* The Frame Container */}
-            <div className="relative magical-frame chamfered-box p-12 md:p-16 glass-panel">
+        {/* Wand Light Overlay */}
+        <div className="wand-light" style={{ '--x': `${mousePosition.x}px`, '--y': `${mousePosition.y}px` } as React.CSSProperties}></div>
+
+        {/* About SITNovate - Gothic Plaque */}
+        <div className="relative transform transition-transform duration-500 py-8">
+            
+            {/* The Plaque Container */}
+            <div className="gothic-plaque p-12 md:p-16 backdrop-blur-sm bg-gradient-to-b from-[#15151a] to-[#0a0a0c]">
                 
-                {/* Decorative Corners (SVGs) */}
-                <CornerOrnament className="absolute top-0 left-0 w-24 h-24 text-[#8a7030] opacity-40 -translate-x-2 -translate-y-2" />
-                <CornerOrnament className="absolute top-0 right-0 w-24 h-24 text-[#8a7030] opacity-40 scale-x-[-1] translate-x-2 -translate-y-2" />
-                <CornerOrnament className="absolute bottom-0 left-0 w-24 h-24 text-[#8a7030] opacity-40 scale-y-[-1] -translate-x-2 translate-y-2" />
-                <CornerOrnament className="absolute bottom-0 right-0 w-24 h-24 text-[#8a7030] opacity-40 scale-[-1] translate-x-2 translate-y-2" />
+                {/* Decorative Inner Line */}
+                <div className="inner-border"></div>
                 
-                {/* Inner Border Line (Thin Gold) */}
-                <div className="absolute inset-4 border border-[#d4af37]/10 pointer-events-none chamfered-box" />
+                {/* Gold Corner Accents (Placed manually to align with notches) */}
+                <CornerAccent className="absolute top-[20px] left-[20px] w-8 h-8 text-[#b88a44] opacity-80 -translate-x-full -translate-y-full" rotate={0} />
+                <CornerAccent className="absolute top-[20px] right-[20px] w-8 h-8 text-[#b88a44] opacity-80 translate-x-full -translate-y-full" rotate={90} />
+                <CornerAccent className="absolute bottom-[20px] right-[20px] w-8 h-8 text-[#b88a44] opacity-80 translate-x-full translate-y-full" rotate={180} />
+                <CornerAccent className="absolute bottom-[20px] left-[20px] w-8 h-8 text-[#b88a44] opacity-80 -translate-x-full translate-y-full" rotate={270} />
 
                 <div className="relative z-10 space-y-10">
                     <div className="flex flex-col items-center gap-4">
-                        <TextType
-                            text={["Decree: SITNovate"]}
-                            typingSpeed={80}
-                            cursorCharacter=""
-                            loop={false}
-                            className="text-2xl md:text-4xl font-title text-[#e5e5e5] tracking-[0.2em] uppercase text-center font-bold text-shadow-sm"
-                        />
-                        <DividerOrnament className="w-64 h-6 text-[#d4af37]/40" />
+                        <div className="relative">
+                            <TextType
+                                text={["About SITNovate"]}
+                                typingSpeed={80}
+                                cursorCharacter=""
+                                loop={false}
+                                className="text-3xl md:text-5xl font-title shimmer-text tracking-[0.15em] uppercase text-center font-bold drop-shadow-2xl"
+                            />
+                            {/* Glow under title */}
+                            <div className="absolute -inset-4 bg-[#d4af37]/10 blur-xl rounded-full -z-10"></div>
+                        </div>
+                        <DividerOrnament className="w-72 h-8 text-[#d4af37] opacity-80" />
                     </div>
 
-                    <div className="space-y-8 text-[#b8b8c0] text-lg md:text-xl leading-relaxed font-body text-justify px-2 md:px-8">
+                    <div className="space-y-8 text-[#c0c0c8] text-lg md:text-xl leading-relaxed font-body text-justify px-2 md:px-8 drop-shadow-md">
                         <p>
-                            <strong className="text-[#c5a059] font-title tracking-wide font-normal uppercase text-sm mr-1">Proclamation:</strong> 
-                            <span className="first-letter:text-4xl first-letter:float-left first-letter:mr-2 first-letter:mt-[-6px] first-letter:text-[#d4af37] first-letter:font-title">S</span>
-                            ITNovate stands as the flagship 24-hour innovation catalyst organized by the scholars of <span className="text-[#d4d4d4] italic border-b border-[#444] pb-0.5 hover:border-[#d4af37] transition-colors">Symbiosis Institute of Technology, Nagpur</span>. This gathering summons the most brilliant minds in technology to collaborate and forge groundbreaking solutions for the realm's most pressing challenges.
+                            <strong className="text-[#d4af37] font-title tracking-wide font-normal uppercase text-sm mr-2 border-b border-[#d4af37]/50 pb-1">SITNovate</strong> 
+                            <span className="first-letter:text-5xl first-letter:float-left first-letter:mr-3 first-letter:mt-[-4px] first-letter:text-[#ffecb3] first-letter:font-title first-letter:drop-shadow-[0_0_5px_rgba(212,175,55,0.5)]">i</span>
+                            s the flagship 24-hour hackathon organized by <span className="text-[#e5e5e5] italic hover:text-[#ffecb3] transition-colors cursor-pointer border-b border-dashed border-[#666] hover:border-[#d4af37]">Symbiosis Institute of Technology, Nagpur</span>. This premier innovation event brings together the brightest minds in technology to collaborate, compete, and create groundbreaking solutions that address real-world challenges.
                         </p>
                     
                         <p>
-                            Over the course of <span className="text-[#e5e5e5] font-semibold">24 intensive hours</span>, initiates work with advanced arts including Artificial Intelligence, Blockchain, and the Internet of Things. The assembly features guidance from distinguished masters of the industry and access to unparalleled resources.
+                            Over the course of <span className="text-[#ffecb3] font-semibold tracking-wide">24 intensive hours</span>, participants work with cutting-edge technologies including AI/ML, blockchain, IoT, and web development frameworks. The event features expert mentorship from industry leaders, comprehensive technical support, and access to state-of-the-art development resources.
                         </p>
 
-                        <div className="mt-12 pt-8 border-t border-[#d4af37]/10 flex flex-wrap justify-center gap-x-12 gap-y-6 text-base opacity-70 font-title tracking-widest text-xs uppercase">
-                            <div className="flex flex-col items-center gap-2">
-                                <span className="text-xl text-[#c5a059]">49</span>
-                                <span>Covens (Teams)</span>
+                        <div className="mt-12 pt-8 border-t border-[#d4af37]/20 flex flex-wrap justify-center gap-x-16 gap-y-8 font-title tracking-widest text-xs uppercase relative">
+                            {/* Animated Stats */}
+                            
+                            <div className="flex flex-col items-center gap-2 stat-glow cursor-default group">
+                                <span className="text-3xl text-[#d4af37] group-hover:scale-110 transition-transform duration-300">700+</span>
+                                <span className="opacity-60 group-hover:opacity-100">Past Participants</span>
                             </div>
-                            <div className="w-px h-10 bg-[#d4af37]/20 hidden md:block"></div>
-                            <div className="flex flex-col items-center gap-2">
-                                <span className="text-xl text-[#c5a059]">800+</span>
-                                <span>Wizards</span>
-                            </div>
-                             <div className="w-px h-10 bg-[#d4af37]/20 hidden md:block"></div>
-                            <div className="flex flex-col items-center gap-2">
-                                <span className="text-xl text-[#c5a059]">1 Lakh</span>
-                                <span>Galleons</span>
+                            
+                            <div className="w-px h-12 bg-gradient-to-b from-transparent via-[#d4af37]/40 to-transparent hidden md:block"></div>
+                            
+                            <div className="flex flex-col items-center gap-2 stat-glow cursor-default group">
+                                <span className="text-3xl text-[#d4af37] group-hover:scale-110 transition-transform duration-300">2 Lakh</span>
+                                <span className="opacity-60 group-hover:opacity-100">Prize Pool</span>
                             </div>
                         </div>
                     </div>

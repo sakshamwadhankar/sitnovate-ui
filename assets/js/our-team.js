@@ -8,34 +8,24 @@
   // Team members data - duplicated for infinite loop effect
   const teamMembers = [
     {
-      name: "Priya Das",
-      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Priya&backgroundColor=b88a44",
-      linkedin: "https://www.linkedin.com/in/priyadas"
+      name: "Sunidhi Haware",
+      image: "/images/Team/SunidhiHaware.jpg",
+      linkedin: "https://www.linkedin.com/in/sunidhi-haware-797a97323/"
     },
     {
-      name: "Aditya Sharma",
-      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Aditya&backgroundColor=b88a44",
-      linkedin: "https://www.linkedin.com/in/adityasharma"
+      name: "Harsh Kumar",
+      image: "/images/Team/HarshKumar.jpg",
+      linkedin: "https://www.linkedin.com/in/harsh-2227-kumar/"
     },
     {
-      name: "Riya Patel",
-      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Riya&backgroundColor=b88a44",
-      linkedin: "https://www.linkedin.com/in/riyapatel"
+      name: "Parth Choudhari",
+      image: "/images/Team/ParthChoudhari.jpeg",
+      linkedin: "https://www.linkedin.com/in/parth-choudhari-2073a0294/"
     },
     {
-      name: "Arjun Singh",
-      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Arjun&backgroundColor=b88a44",
-      linkedin: "https://www.linkedin.com/in/arjunsingh"
-    },
-    {
-      name: "Sanya Mehta",
-      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Sanya&backgroundColor=b88a44",
-      linkedin: "https://www.linkedin.com/in/sanyamehta"
-    },
-    {
-      name: "Vikram Malhotra",
-      image: "https://api.dicebear.com/9.x/notionists/svg?seed=Vikram&backgroundColor=b88a44",
-      linkedin: "https://www.linkedin.com/in/vikrammalhotra"
+      name: "Prathmesh Raipurkar",
+      image: "/images/Team/PrathmeshRaipurkar.jpeg",
+      linkedin: "https://www.linkedin.com/in/prathmesh-raipurkar-2073a0294/"
     }
   ];
 
@@ -69,7 +59,7 @@
         </div>
         <div class="card-info">
           <h3 class="card-name">${member.name}</h3>
-          <a href="${member.linkedin}" target="_blank" rel="noopener noreferrer" class="card-connect-btn" onclick="event.stopPropagation();">
+          <a href="${member.linkedin}" target="_blank" rel="noopener noreferrer" class="card-connect-btn">
             <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
@@ -102,6 +92,15 @@
 
     contentContainer.appendChild(customWrapper);
 
+    // Add event listeners to all connect buttons to prevent carousel interference
+    const connectButtons = customWrapper.querySelectorAll('.card-connect-btn');
+    connectButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Link will work naturally since it's an <a> tag
+      });
+    });
+
     // Initialize infinite scroll
     const track = customWrapper.querySelector('.team-carousel-track');
     let scrollPosition = 0;
@@ -110,29 +109,33 @@
     const totalCards = teamMembers.length;
     const resetPoint = cardWidth * totalCards;
 
-    function animate() {
-      scrollPosition += scrollSpeed;
-
-      // Reset position for infinite loop
-      if (scrollPosition >= resetPoint) {
-        scrollPosition = 0;
-      }
-
-      track.style.transform = `translateX(-${scrollPosition}px)`;
-      requestAnimationFrame(animate);
-    }
-
-    // Start animation
-    animate();
-
     // Pause on hover
+    let isPaused = false;
     track.addEventListener('mouseenter', () => {
-      track.style.animationPlayState = 'paused';
+      isPaused = true;
     });
 
     track.addEventListener('mouseleave', () => {
-      track.style.animationPlayState = 'running';
+      isPaused = false;
     });
+
+    // Modified animate function to respect pause
+    function animateWithPause() {
+      if (!isPaused) {
+        scrollPosition += scrollSpeed;
+
+        // Reset position for infinite loop
+        if (scrollPosition >= resetPoint) {
+          scrollPosition = 0;
+        }
+
+        track.style.transform = `translateX(-${scrollPosition}px)`;
+      }
+      requestAnimationFrame(animateWithPause);
+    }
+
+    // Start animation with pause support
+    animateWithPause();
 
     // Styles
     if (!document.getElementById('team-styles')) {
