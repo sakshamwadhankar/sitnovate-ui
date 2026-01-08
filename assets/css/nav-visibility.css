@@ -1,0 +1,38 @@
+/**
+ * Navigation Visibility Control
+ * Hides navigation bars on all pages except the first one
+ */
+
+/* Show navigation only when on first section (section 0) */
+body[data-current-section="0"] .PageFrameLayout_header__kPFXh,
+body[data-current-section="0"] .PageFrameLayout_navigation__5pvL7 {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+/* Hide navigation on all other sections */
+body[data-current-section="1"] .PageFrameLayout_header__kPFXh,
+body[data-current-section="2"] .PageFrameLayout_header__kPFXh,
+body[data-current-section="3"] .PageFrameLayout_header__kPFXh,
+body[data-current-section="4"] .PageFrameLayout_header__kPFXh,
+body[data-current-section="5"] .PageFrameLayout_header__kPFXh,
+body[data-current-section="6"] .PageFrameLayout_header__kPFXh {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(-100%) !important;
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+body[data-current-section="1"] .PageFrameLayout_navigation__5pvL7,
+body[data-current-section="2"] .PageFrameLayout_navigation__5pvL7,
+body[data-current-section="3"] .PageFrameLayout_navigation__5pvL7,
+body[data-current-section="4"] .PageFrameLayout_navigation__5pvL7,
+body[data-current-section="5"] .PageFrameLayout_navigation__5pvL7,
+body[data-current-section="6"] .PageFrameLayout_navigation__5pvL7 {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(100%) !important;
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
