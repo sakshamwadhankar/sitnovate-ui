@@ -220,33 +220,42 @@
           justify-content: flex-start;
           padding: 4rem 2rem 2rem 2rem;
           z-index: 10;
-          background: #000;
+          background: radial-gradient(circle at 50% 50%, #1a1a1e 0%, #050505 85%);
           overflow-y: auto;
         }
 
-        /* Subtle background elements */
+        /* Noise texture overlay */
         .sponsors-wrapper::before {
           content: '';
-          position: absolute;
+          position: fixed;
           top: 0;
-          left: 25%;
-          width: 24rem;
-          height: 24rem;
-          background: radial-gradient(circle, rgba(212, 175, 55, 0.05), transparent);
-          filter: blur(120px);
+          left: 0;
+          width: 100%;
+          height: 100%;
           pointer-events: none;
+          z-index: 1;
+          opacity: 0.03;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
+        /* Magical glow orbs */
         .sponsors-wrapper::after {
           content: '';
-          position: absolute;
-          bottom: 0;
-          right: 25%;
-          width: 24rem;
-          height: 24rem;
-          background: radial-gradient(circle, rgba(128, 0, 128, 0.1), transparent);
-          filter: blur(120px);
+          position: fixed;
+          top: 20%;
+          right: 10%;
+          width: 20rem;
+          height: 20rem;
+          background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent);
+          filter: blur(80px);
           pointer-events: none;
+          z-index: 1;
+          animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
         }
 
         .sponsors-content {
@@ -254,6 +263,39 @@
           width: 100%;
           position: relative;
           z-index: 10;
+          padding: 2rem;
+          background: rgba(10, 10, 12, 0.4);
+          border: 1px solid rgba(212, 175, 55, 0.15);
+          box-shadow: 0 0 40px rgba(0,0,0,0.6) inset;
+          border-radius: 8px;
+        }
+
+        /* Decorative corner ornaments */
+        .sponsors-content::before {
+          content: '';
+          position: absolute;
+          top: -8px;
+          left: -8px;
+          width: 80px;
+          height: 80px;
+          opacity: 0.3;
+          background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" fill="%238a7030" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L30,0 C45,0 45,15 60,15 C75,15 85,5 100,0 L100,30 C95,45 80,45 80,60 C80,75 90,85 100,100 L70,100 C55,100 55,85 40,85 C25,85 15,95 0,100 L0,70 C5,55 20,55 20,40 C20,25 10,15 0,0 Z M10,10 L15,10 C20,10 20,20 10,20 L10,15 Z"/></svg>') no-repeat center;
+          background-size: contain;
+          pointer-events: none;
+        }
+
+        .sponsors-content::after {
+          content: '';
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          width: 80px;
+          height: 80px;
+          opacity: 0.3;
+          background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" fill="%238a7030" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L30,0 C45,0 45,15 60,15 C75,15 85,5 100,0 L100,30 C95,45 80,45 80,60 C80,75 90,85 100,100 L70,100 C55,100 55,85 40,85 C25,85 15,95 0,100 L0,70 C5,55 20,55 20,40 C20,25 10,15 0,0 Z M10,10 L15,10 C20,10 20,20 10,20 L10,15 Z"/></svg>') no-repeat center;
+          background-size: contain;
+          transform: scaleX(-1);
+          pointer-events: none;
         }
 
         /* Header Section */
@@ -267,7 +309,7 @@
           align-items: center;
           justify-content: center;
           gap: 1rem;
-          opacity: 0.7;
+          opacity: 0.8;
           margin-bottom: 0.75rem;
         }
 
@@ -275,6 +317,7 @@
           height: 1px;
           width: 3rem;
           background: linear-gradient(to right, transparent, #d4af37);
+          box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
         }
 
         .line-right {
@@ -287,6 +330,7 @@
           font-family: 'Cinzel', serif;
           letter-spacing: 0.3em;
           font-weight: 700;
+          text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
 
         .sponsors-main-title {
@@ -294,8 +338,9 @@
           font-family: 'Cinzel', serif;
           font-weight: 700;
           color: #fff;
-          text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+          text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3), 0 0 20px rgba(212, 175, 55, 0.2);
           margin-bottom: 0.5rem;
+          letter-spacing: 0.15em;
         }
 
         @media (min-width: 768px) {
@@ -323,22 +368,24 @@
           align-items: center;
           gap: 0.75rem;
           margin-bottom: 1.5rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .shield-icon {
           width: 1rem;
           height: 1rem;
-          color: #6b7280;
+          color: #8a7030;
+          filter: drop-shadow(0 0 4px rgba(138, 112, 48, 0.5));
         }
 
         .ministry-title {
           font-size: 1.125rem;
           font-family: 'Cinzel', serif;
-          color: #6b7280;
+          color: #8a7030;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          border-bottom: 1px solid #4b5563;
-          padding-bottom: 0.25rem;
+          text-shadow: 0 0 8px rgba(138, 112, 48, 0.3);
         }
 
         /* Shield Grid - 4x2 layout */
@@ -388,15 +435,16 @@
         .shield-frame {
           position: relative;
           height: 100%;
-          background: #0a0a0a;
+          background: linear-gradient(145deg, #0a0a0a, #151515);
           border-radius: 2rem 2rem 6rem 6rem;
           transition: all 0.5s;
-          box-shadow: 0 0 0 1px rgba(160, 160, 160, 0.2);
+          box-shadow: 0 0 0 1px rgba(160, 160, 160, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
           overflow: hidden;
         }
 
         .sponsor-shield:hover .shield-frame {
           transform: translateY(-0.5rem);
+          box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4), 0 8px 24px rgba(212, 175, 55, 0.15), 0 0 30px rgba(212, 175, 55, 0.1);
         }
 
         /* Inner Shield Content */
@@ -410,9 +458,13 @@
           justify-content: center;
           text-align: center;
           position: relative;
-          background: #111;
+          background: linear-gradient(145deg, rgba(17, 17, 17, 0.95), rgba(25, 25, 25, 0.9));
           border-radius: 2rem 2rem 6rem 6rem;
           border: 1px solid rgba(160, 160, 160, 0.1);
+        }
+
+        .sponsor-shield:hover .shield-inner {
+          border-color: rgba(212, 175, 55, 0.2);
         }
 
         /* Decorative Top Bolt */
