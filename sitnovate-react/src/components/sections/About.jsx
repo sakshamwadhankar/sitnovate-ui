@@ -252,7 +252,7 @@ export default function About() {
     return (
         <section
             id="about"
-            className="h-screen w-full bg-transparent text-[#d4cfc3] selection:bg-[#3d2b1f] selection:text-[#d4af37] flex items-center justify-center overflow-hidden snap-start relative"
+            className="h-screen w-full bg-gradient-to-br from-[#0a0a0f] via-[#050505] to-[#0f0a05] text-[#d4cfc3] selection:bg-[#3d2b1f] selection:text-[#d4af37] flex items-center justify-center overflow-hidden snap-start relative"
             ref={containerRef}
             onMouseMove={handleMouseMove}
         >
