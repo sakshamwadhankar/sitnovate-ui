@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = () => {
+const Navbar = ({ currentSection, onNavigate }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMuted, setIsMuted] = useState(true);
     const audioRef = React.useRef(null);
@@ -21,47 +21,43 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        // Auto-play attempt on mount (often blocked by browser, so muted by default is safe)
         if (audioRef.current) {
             audioRef.current.volume = 0.4;
         }
     }, []);
 
-    const scrollToSection = (id) => {
+    // Navigation Handler (uses index)
+    const handleNavClick = (index) => {
         setIsMenuOpen(false);
-        const element = document.getElementById(id);
-        if (element) {
-            setTimeout(() => {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }, 300); // Wait for menu to close
-        }
+        // Small delay to allow menu to start closing before slide moves (optional)
+        setTimeout(() => {
+            onNavigate(index);
+        }, 300);
     };
 
     const menuItems = [
-        { id: 'hero', label: 'Home' },
-        { id: 'about', label: 'About' },
-        { id: 'what-we-provide', label: 'What We Provide' },
-        { id: 'event-highlights', label: 'Highlights' },
-        { id: 'sponsors', label: 'Sponsors' },
-        { id: 'our-team', label: 'Team' },
-        { id: 'get-in-touch', label: 'Contact' }
+        { index: 0, label: 'Home' },
+        { index: 1, label: 'About' },
+        { index: 2, label: 'What We Provide' },
+        { index: 3, label: 'Highlights' },
+        { index: 4, label: 'Sponsors' },
+        { index: 5, label: 'Team' },
+        { index: 6, label: 'Contact' }
     ];
 
     return (
         <>
             {/* Top Header Bar */}
             <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-12 pointer-events-none">
-
-                {/* Menu Button */}
                 <button
                     onClick={toggleMenu}
                     className="pointer-events-auto text-hp-gold uppercase font-cinzel tracking-widest text-sm md:text-base hover:text-white transition-colors z-50 mix-blend-difference"
+                    aria-label="Toggle Menu"
                 >
                     {isMenuOpen ? 'Close' : 'Menu'}
                 </button>
 
-                {/* Center Logo (Brand Mark) */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 pointer-events-auto">
+                <div className="absolute left-1/2 transform -translate-x-1/2 pointer-events-auto cursor-pointer" onClick={() => onNavigate(0)}>
                     <img
                         src="/assets/images/logo/brand-mark.png"
                         alt="Brand Mark"
@@ -69,25 +65,21 @@ const Navbar = () => {
                     />
                 </div>
 
-                {/* Audio Toggle */}
                 <button
                     onClick={toggleAudio}
                     className="pointer-events-auto flex items-center space-x-1 z-50"
+                    aria-label="Toggle Audio"
                 >
                     <div className={`w-6 h-6 border rounded-full flex items-center justify-center border-hp-gold/50 ${!isMuted ? 'animate-pulse' : ''}`}>
-                        {/* Simple Audio Icon */}
                         <div className={`w-0.5 h-3 bg-hp-gold mx-[1px] ${!isMuted ? 'animate-[bounce_1s_infinite]' : ''}`}></div>
                         <div className={`w-0.5 h-4 bg-hp-gold mx-[1px] ${!isMuted ? 'animate-[bounce_0.8s_infinite]' : ''}`}></div>
                         <div className={`w-0.5 h-2 bg-hp-gold mx-[1px] ${!isMuted ? 'animate-[bounce_1.2s_infinite]' : ''}`}></div>
                     </div>
-                    <span className="sr-only">Toggle Audio</span>
                 </button>
 
-                {/* Audio Element */}
                 <audio ref={audioRef} loop src="/assets/audio/ambience.webm" />
             </header>
 
-            {/* Fullscreen Menu Overlay */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -98,14 +90,14 @@ const Navbar = () => {
                         className="fixed inset-0 z-40 bg-hp-dark/95 backdrop-blur-md flex flex-col items-center justify-center pointer-events-auto"
                     >
                         <nav className="flex flex-col space-y-6 text-center">
-                            {menuItems.map((item, index) => (
+                            {menuItems.map((item, i) => (
                                 <motion.button
-                                    key={item.id}
+                                    key={i}
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
-                                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                                    onClick={() => scrollToSection(item.id)}
-                                    className="text-2xl md:text-4xl font-cinzel text-gray-300 hover:text-hp-gold transition-colors tracking-wider"
+                                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                                    onClick={() => handleNavClick(item.index)}
+                                    className={`text-2xl md:text-4xl font-cinzel transition-colors tracking-wider ${currentSection === item.index ? 'text-hp-gold' : 'text-gray-300 hover:text-hp-gold'}`}
                                 >
                                     {item.label}
                                 </motion.button>
