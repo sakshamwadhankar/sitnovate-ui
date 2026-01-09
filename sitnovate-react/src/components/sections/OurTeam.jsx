@@ -193,7 +193,7 @@ const OurTeam = () => {
     return (
         <section
             id="our-team"
-            className="h-screen w-full relative overflow-hidden bg-transparent flex flex-col items-center justify-center snap-start selection:bg-[#3d2b1f] selection:text-[#d4af37]"
+            className="h-screen w-full relative overflow-hidden bg-[#050505] flex flex-col items-center justify-center snap-start selection:bg-[#3d2b1f] selection:text-[#d4af37]"
             ref={sectionRef}
             onMouseMove={handleMouseMove}
         >

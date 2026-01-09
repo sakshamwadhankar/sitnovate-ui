@@ -75,7 +75,7 @@ export default function GetInTouch() {
     return (
         <section
             id="get-in-touch"
-            className="h-screen w-full relative overflow-hidden bg-transparent flex flex-col items-center justify-center p-4 snap-start selection:bg-[#3d2b1f] selection:text-[#d4af37]"
+            className="h-screen w-full relative overflow-hidden bg-[#030305] flex flex-col items-center justify-center p-4 snap-start selection:bg-[#3d2b1f] selection:text-[#d4af37]"
             ref={sectionRef}
             onMouseMove={handleMouseMove}
         >
