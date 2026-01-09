@@ -12,8 +12,7 @@ const EventHighlights = () => {
     ];
 
     return (
-        <section id="event-highlights" className="h-screen w-full relative flex flex-col items-center justify-center p-6 snap-start"
-            style={{ background: 'linear-gradient(180deg, rgba(10, 15, 28, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%)' }}
+        <section id="event-highlights" className="h-screen w-full relative flex flex-col items-center justify-center p-6 snap-start bg-transparent"
         >
             <motion.div
                 initial={{ opacity: 0, y: -20 }}

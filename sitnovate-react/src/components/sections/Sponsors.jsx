@@ -16,7 +16,7 @@ const Sponsors = () => {
     ];
 
     return (
-        <section id="sponsors" className="h-screen w-full bg-slate-900 flex flex-col items-center justify-center p-6 relative overflow-hidden snap-start">
+        <section id="sponsors" className="h-screen w-full bg-transparent flex flex-col items-center justify-center p-6 relative overflow-hidden snap-start">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/images/noise/noise.png')] opacity-5 pointer-events-none mix-blend-overlay"></div>
 

@@ -8,6 +8,8 @@ import Sponsors from './components/sections/Sponsors';
 import OurTeam from './components/sections/OurTeam';
 import GetInTouch from './components/sections/GetInTouch';
 
+import ShaderDemo_ATC from './components/ui/atc-shader';
+
 function App() {
   const [activeSection, setActiveSection] = useState(0);
   const isScrolling = useRef(false);
@@ -94,6 +96,16 @@ function App() {
 
   return (
     <>
+      {/* Global Shader Background - Visible on all pages EXCEPT Hero (index 0) */}
+      <div
+        className={`fixed inset-0 z-0 transition-opacity duration-1000 ${activeSection === 0 ? 'opacity-0' : 'opacity-100'}`}
+        style={{ pointerEvents: 'none' }}
+      >
+        <ShaderDemo_ATC />
+        {/* Dark overlay to ensure text readability on top of shader */}
+        <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
+      </div>
+
       <Navbar currentSection={activeSection} onNavigate={scrollToSection} />
 
       {/* 
@@ -101,7 +113,7 @@ function App() {
          Inner Track: Instantly transforms.
          NO transition property -> Instant jump
       */}
-      <main className="fixed inset-0 w-full h-full overflow-hidden bg-hp-dark">
+      <main className="fixed inset-0 w-full h-full overflow-hidden bg-transparent">
         <div
           className="w-full h-full"
           style={{

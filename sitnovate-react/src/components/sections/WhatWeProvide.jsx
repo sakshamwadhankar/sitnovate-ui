@@ -202,7 +202,7 @@ const WhatWeProvide = () => {
     return (
         <section
             id="what-we-provide"
-            className="h-screen w-full bg-[#050505] relative overflow-hidden flex flex-col items-center justify-center p-4 snap-start selection:bg-[#3d2b1f] selection:text-[#d4af37]"
+            className="h-screen w-full bg-transparent relative overflow-hidden flex flex-col items-center justify-center p-4 snap-start selection:bg-[#3d2b1f] selection:text-[#d4af37]"
             ref={containerRef}
             onMouseMove={handleMouseMove}
         >
