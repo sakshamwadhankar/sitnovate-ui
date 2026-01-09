@@ -37,12 +37,11 @@ const Navbar = ({ currentSection, onNavigate }) => {
 
     const menuItems = [
         { index: 0, label: 'Home' },
-        { index: 1, label: 'About' },
-        { index: 2, label: 'What We Provide' },
-        { index: 3, label: 'Highlights' },
-        { index: 4, label: 'Sponsors' },
-        { index: 5, label: 'Team' },
-        { index: 6, label: 'Contact' }
+        { index: 1, label: 'What We Provide' },
+        { index: 2, label: 'Highlights' },
+        { index: 3, label: 'Sponsors' },
+        { index: 4, label: 'Team' },
+        { index: 5, label: 'Contact' }
     ];
 
     return (
@@ -57,11 +56,11 @@ const Navbar = ({ currentSection, onNavigate }) => {
                     {isMenuOpen ? 'Close' : 'Menu'}
                 </button>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 pointer-events-auto cursor-pointer" onClick={() => onNavigate(0)}>
+                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-auto cursor-pointer" onClick={() => onNavigate(0)}>
                     <img
                         src="/assets/images/logo/brand-mark.png"
                         alt="Brand Mark"
-                        className="w-8 md:w-12 opacity-80 hover:opacity-100 transition-opacity"
+                        className="w-12 md:w-16 opacity-90 hover:opacity-100 transition-opacity"
                     />
                 </div>
 

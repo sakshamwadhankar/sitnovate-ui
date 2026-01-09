@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
-import About from './components/sections/About';
 import WhatWeProvide from './components/sections/WhatWeProvide';
 import EventHighlights from './components/sections/EventHighlights';
 import Sponsors from './components/sections/Sponsors';
@@ -12,7 +11,7 @@ function App() {
   const [activeSection, setActiveSection] = useState(0);
   const isScrolling = useRef(false);
   const touchStartY = useRef(0);
-  const TOTAL_SECTIONS = 7;
+  const TOTAL_SECTIONS = 6; // Reduced count
 
   // The "Instant Snap" logic - No Animation, Just Jump
   const handleScroll = (direction) => {
@@ -110,7 +109,6 @@ function App() {
           }}
         >
           <Hero />
-          <About />
           <WhatWeProvide />
           <EventHighlights />
           <Sponsors />
